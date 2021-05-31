@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Equality_Child
+ * @package peibo_Child
  */
 
 get_header();
@@ -20,15 +20,15 @@ get_header();
 					</figure>
 					<div class="page-header">
 						<div class="titleGen full">
-							<h1 class="titleGen__head titleGen__head--center"><?php esc_html_e( 'Oops! No se encontró la página', 'equality-child' ); ?></h1>
+							<h1 class="titleGen__head titleGen__head--center"><?php esc_html_e( 'Oops! No se encontró la página', 'peibo-child' ); ?></h1>
 						</div>
 					</div><!-- .page-header -->
 
 					<div class="page-content text-center">
-						<p><?php esc_html_e( 'Parece que lo que estás buscando no se encuentra aquí. Intenta con otra dirección.', 'equality-child' ); ?></p> 
+						<p><?php esc_html_e( 'Parece que lo que estás buscando no se encuentra aquí. Intenta con otra dirección.', 'peibo-child' ); ?></p> 
 					</div><!-- .page-content -->
 					<div class="btnGen404">
-						<a class="btnFx btnFx__generic btnFx__generic--purple" href="<?php echo esc_url(site_url('')); ?>"><span><?php _e('Regresar al inicio', 'equality-child'); ?></span></a>
+						<a class="btnFx btnFx__generic btnFx__generic--purple" href="<?php echo esc_url(site_url('')); ?>"><span><?php _e('Regresar al inicio', 'peibo-child'); ?></span></a>
 					</div>
 				</div>
 			</div>
