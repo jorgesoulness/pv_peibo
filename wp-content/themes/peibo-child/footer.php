@@ -1,61 +1,77 @@
-
           </div>
-        </main><!-- end.Main -->
+        </main>
 
         <!-- footer -->
         <footer class="g-footer" data-blur-content>
-          <div class="container">
+          <div class="col-sm-8">
             <div class="row">
-              <div class="col-12">
-                <div class="g-footer__desc g-footer__desc--up text-center">
-                  <!-- Back to top button -->
-                  <a id="button" class="btnFx btnFx__generic btnFx__generic--orange"><span><?php _e('Regresar', 'peibo-child'); ?></span></a>
-                <?php
-                  wp_nav_menu( array(
-                    'items_wrap'     => '<ul class="menu_footer">%3$s</ul>',
-                    'theme_location' => 'menu-footer',
-                    'container'       => 'div',
-                    'container_class' => 'menuGenFooter',
-                    'container_id'    => '',
-                    'before'          => '',
-                    'after'           => '',
-                  ) );
-                ?><!-- end.menuGenFooter -->
-                </div><!-- end.footer__desc--up -->
-              </div><!-- end.col-* -->
-            </div><!-- end.row -->
-          </div><!-- end.container -->
-          <hr>
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="g-footer__desc g-footer__desc--down">
-                  <div class="copyFooter">
-                    <p><?php _e('Todos los Derechos Reservados', 'peibo-child'); ?> | &copy; Peibo <?php echo wp_date('Y') ?> | <a href="<?php echo esc_url(site_url('')); ?>/<?php $currentLanguage  = get_bloginfo('language'); if($currentLanguage == "en-US") : ?>en/privacy-policy<?php elseif($currentLanguage == "pt-PT") : ?>pt/aviso-de-privacidade<?php else: ?>aviso-de-privacidad<?php endif; ?>"><?php _e('Aviso de Privacidad', 'peibo-child'); ?></a>
-                    </p>
-                  </div>
-              <?php if( have_rows('footer', 'option') ): ?>
-                  <div class="menuGenFooter">
-                    <ul class="socFoo">
-              <?php while( have_rows('footer', 'option') ): the_row(); ?>
-              <?php if( get_row_layout() == 'sociales_footer' ): ?>
-                      <li><a class="tyi-<?php the_sub_field('selecciona_social'); ?>" href="<?php the_sub_field('url_social'); ?>" target="_blank"></a></li>
-              <?php endif; ?>
-              <?php endwhile; ?>
+              <div class="col-sm-4">
+                <ul class="listFooter">
+                  <li>
+                    <img src="/wp-content/themes/peibo-child/assets/img/logos/LOGO.png" class="imgFooterLogo">
+                  </li>
+                  <li>
+                    <label>Bosques de las Lomas, CDMX</label>
+                  </li>
+                  <li>
+                    <a href="tel:+5212345678">T. 12.34.56.78</a>
+                  </li>
+                  <li>
+                    <ul class="listSociales">
+                      <li>
+                        <a href="#">
+                            <img src="/wp-content/themes/peibo-child/assets/img/ico-ins.png" width="50%">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                            <img src="/wp-content/themes/peibo-child/assets/img/ico-fb.png" width="50%">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                            <img src="/wp-content/themes/peibo-child/assets/img/icon-tw.png" width="50%">
+                        </a>
+                      </li>
                     </ul>
-                  </div><!-- end.menuGenFooter -->
-              <?php endif; ?>
-                </div><!-- end.footer__desc--up -->
-              </div><!-- end.col-* -->
-            </div><!-- end.row -->
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                  <ul class="listFooter">
+                    <!--<li>
+                      <a href="/personal">Personal</a>
+                    </li>-->
+                    <li>
+                      <a href="/empresas">Empresas</a>
+                    </li>
+                    <li>
+                      <a href="/blog">Blog</a>
+                    </li>
+                  </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="listFooter">
+                    <li>
+                      <a href="/legales">Legales</a>
+                    </li>
+                    <li>
+                      <a href="/privacidad">Aviso de Privacidad</a>
+                    </li>
+                    <li>
+                      <a href="/terminos-y-condiciones">Términos y Condiciones</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
           </div><!-- end.container -->
         </footer><!-- end.Footer -->
         
         <?php wp_footer(); ?>
 
-        <script>
+        <script> 
           $('body').show();
-          // $('.version').text(NProgress.version);
+          // $('.version').text(NProgress.version);  
           NProgress.start();
           setTimeout(function () {
             NProgress.done();
@@ -67,6 +83,62 @@
           // $("#b-40").click(function() { NProgress.set(0.4); });
           // $("#b-inc").click(function() { NProgress.inc(); });
           // $("#b-100").click(function() { NProgress.done(); });
+
+          $(document).ready(function() {  
+            function generateCVV() {
+               var max = 900;
+               var min = 0;
+                var num = Math.floor(Math.random() * (max - min));
+                var num_final = num + min;
+
+                if(num_final < 100 && num_final > 10){
+                  num_final = "0" + num_final;
+                }
+                if(num_final < 10){
+                  num_final = "00" + num_final;
+                }
+                
+
+                $(".cvvGene").empty().html(num_final);
+            }
+            setInterval(generateCVV, 1000);
+
+            var scrollPos = 0;
+            window.addEventListener('scroll', function(){
+              if ((document.body.getBoundingClientRect()).top < scrollPos){
+                $(".g-header").addClass("activeHead");
+              }
+              else{
+                $(".g-header").removeClass("activeHead");
+              }
+            });
+
+            $(".iconHambur").click(function(){
+              if($(".menuDesMobile").hasClass("menu-none") == true){
+                $(".menuDesMobile").show("slow").removeClass("menu-none").addClass("menu-open");
+              }
+              else{
+                if($(".menuDesMobile").hasClass("menu-open") == true){
+                  $(".menuDesMobile").hide("slow").removeClass("menu-open").addClass("menu-none");
+                }
+              }
+
+            });
+
+            $(".iconCloseMobile").click(function(){
+              if($(".menuDesMobile").hasClass("menu-none") == true){
+                $(".menuDesMobile").show("slow").removeClass("menu-none").addClass("menu-open");
+              }
+              else{
+                if($(".menuDesMobile").hasClass("menu-open") == true){
+                  $(".menuDesMobile").hide("slow").removeClass("menu-open").addClass("menu-none");
+                }
+              }
+            });
+
+        });
         </script>
+
+
     </body>
 </html>

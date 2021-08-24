@@ -8,6 +8,7 @@
         <!-- S T Y L E S - G E N E R A L -->
         <meta name="theme-color" content="#712a81" />
         <?php wp_head(); ?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -26,44 +27,89 @@
 
     <!-- Header -->
     <header id="headerGeneral" class="g-header" data-blur-content>
-      <div class="brand">
-<?php
-      the_custom_logo();
-  if (is_page(39)) :
-?>
-      <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-<?php else : ?>
-      <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-<?php
-  endif;
-?>
-      </div>
-      <nav class="btnNav">
-        <a href="#menu" data-menu-expand="#menu"><?php _e('Menú', 'peibo-child'); ?></a>
-      </nav>
-    </header><!-- end.header -->
+      <div class="container-fluid d-none d-sm-none d-md-block">
+          <div class="row justify-content-between d-flex">
+            <div class="col-sm-5">
+              <ul class="listHeader">
+                  <li>
+                    <a href="<?php site_url(''); ?>">
+                      <img src="/wp-content/themes/peibo-child/assets/img/logos/logoHeader.png" width="70%" class="imgHeader" />
+                    </a>
+                  </li>
+                  <!--<li>
+                    <a href="/personal">personal</a>
+                  </li>-->
+                  <li>
+                    <a href="/empresas">empresas</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="col-sm-4 justify-content-end d-flex">
+              <ul class="listHeader">
+                  <li>
+                    <a href="/personal#ContentContacto">contacto</a>
+                  </li>
+                  <li>
+                    <a href="#">sign in</a>
+                  </li>
+                  <li>
+                    <a href="#" class="btnSing">sign up</a>
+                  </li>
+                </ul>
 
-    <!-- Menu -->
-    <nav id="menu">
-      <div class="inner">
-<?php
-      wp_nav_menu( array(
-        'items_wrap'     => '<ul class="links">%3$s</ul>',
-        'theme_location' => 'menu-main',
-        'container'       => '',
-        'container_class' => '',
-        'container_id'    => '',
-        'before'          => '',
-        'after'           => '',
-      ) );
-?>
-        <ul class="actions stacked">
-          <a class="btnFx btnFx__generic btnFx__generic--orange" href="<?php echo esc_url(site_url('')); ?>/<?php $currentLanguage  = get_bloginfo('language'); if($currentLanguage == "en-US") : ?>en/contact-us<?php elseif($currentLanguage == "pt-PT") : ?>pt/contato<?php else: ?>contacto<?php endif; ?>"><span><?php _e('Contacto', 'peibo-child'); ?></span></a>
-        </ul>
+            </div>
+          </div>
       </div>
-      <a class="close" href="#menu"><?php _e('Cerrar', 'peibo-child'); ?></a>
-    </nav>
+      <div class="container-fluid d-block d-sm-block d-md-none ">
+        <div class="row ">
+            <div class="col-sm-12">
+              <ul class="listHeaderMobile">
+                  <li class="">
+                    <a href="<?php site_url(''); ?>" class="">
+                      <img src="/wp-content/themes/peibo-child/assets/img/logos/logoHeader.png" width="50%" class="imgHeader" />
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <i class="fa fa-bars iconHambur"></i>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+      </div>
+    </header>
+
+    <div class="menuDesMobile  d-block d-sm-block d-md-none container-fluid menu-none">
+      <div class="contentCloseMobile">
+        <img src="/wp-content/themes/peibo-child/assets/img/iconClose.svg" class="iconCloseMobile">
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12">
+          <ul>
+            <!--<li>
+              <a href="/personal">personal <i class="fa fa-chevron-right"></i></a>
+            </li>-->
+            <li>
+              <a href="/empresas">empresas <i class="fa fa-chevron-right"></i></a>
+            </li>
+            <li>
+              <hr class="menuMolbileHr" />
+            </li>
+            <li>
+              <a href="/personal#ContentContacto">contacto <i class="fa fa-chevron-right"></i></a>
+            </li>
+            <li>
+              <a href="#">sign in <i class="fa fa-chevron-right"></i></a>
+            </li>
+            <li>
+              <a href="#" class="btnSing">sign up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     
     <!-- Main -->
-    <main class="PageContainer" data-blur-content>
+    <main data-blur-content>
       <div id="primary" class="content-area">

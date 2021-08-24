@@ -11,14 +11,14 @@
   font-size: $font-size-base;
   line-height: $input-line-height;
   color: $input-color;
-  background-color: $input-bg;
+  background-color: #F1F1F1 !important;
   background-clip: padding-box;
-  border: $input-border-width solid $input-border-color;
+  border: none !important;
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @if $enable-rounded {
     // Manually use the if/else instead of the mixin to account for iOS override
-    border-radius: $input-border-radius;
+    border-radius: 0;
   } @else {
     // Otherwise undo the iOS default
     border-radius: 0;

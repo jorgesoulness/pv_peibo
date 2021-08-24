@@ -3,7 +3,10 @@
    ======================= */
 
 .g-footer {
-  width: 100%; height: auto; @include position(fixed, null null 0 0); padding: 45px 0 40px 0; margin: 0; z-index: 4; background-color: $col1; border-top: 1px solid $col2; z-index: -1;
+z-index:10 !important;
+  width: 100%; height: auto;  padding: 45px 0 40px 0; margin: 0; z-index: 4; 
+  margin-bottom: -1% !important;
+  border: none; background-color: $colorFooter;
   hr {
     border-top: rgba($col8, 0.50) solid 1px; width: 100%; margin-top: 20px; margin-bottom: 20px;
   }
@@ -14,6 +17,8 @@
         margin-bottom: 20px;
       }
     }
+
+
   }
   @media all and (min-width: 768px) {
     padding: 65px 0 60px 0;
@@ -22,6 +27,43 @@
     }
   }
 }
+
+
+.listFooter{
+    list-style: none;
+    li{
+      label{
+        color: $white;
+      }
+      a{
+        color: $white;
+        font-family: $sofiaRegular;
+        &hover{
+            text-decoration: none;
+            color: $white;
+        }
+      }
+      img.imgFooterLogo{
+        width: 15%;
+        margin-bottom: 3%;
+      }
+    }
+}
+
+.listSociales{
+  list-style: none;
+  margin-left: -4%;
+  margin-top: 2%;
+  li{
+    float: left;
+    margin: 0%;
+  }
+}
+
+.conMEnuFooter{
+  margin-top:4%;
+}
+
 .menuGenFooter {
   width: 100%; height: auto; padding: 0; margin: 0;
   .menu_footer {
@@ -99,5 +141,30 @@
   }
   @media all and (min-width: 556px) {
     margin: 0 0 20px;
+  }
+}
+
+
+
+/* estilos desktop */
+@media all and (min-width: 768px) {
+
+  .listFooter{
+    li{
+      label{
+        color: $white;
+      }
+      a{
+        
+      }
+      img.imgFooterLogo{
+        width: 35%;
+      }
+    }
+  }
+
+  .listSociales{
+    margin-left: -4%;
+    margin-top: 2%;
   }
 }

@@ -22,7 +22,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'peibo' ), 'peibo', '<a href="https://concepthaus.mx/">Jorge Malagón</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'peibo' ), 'peibo', '<a href="https://concepthaus.mx/">ConceptHaus</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

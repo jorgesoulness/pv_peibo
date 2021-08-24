@@ -14,6 +14,16 @@ $fontR: '../fonts/';
 @include font-face("medium", "#{$fontR}helvetica/HelveticaNeueMedium", $file-formats: woff);
 @include font-face("bold", "#{$fontR}helvetica/HelveticaNeueBold", $file-formats: woff);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@include font-face("sofiaRegular", "#{$fontR}Sofia-Pro-Regular-Az", $file-formats: woff);
+$sofiaRegular: 'sofiaRegular', Helvetica, Arial, sans-serif;
+
+@include font-face("sofiaBold", "#{$fontR}Sofia-Pro-Semi-Bold-Az", $file-formats: woff);
+$sofiaBold: 'sofiaBold', Helvetica, Arial, sans-serif;
+
+
+
+
 $hthin: 'thin', sans-serif;
 $hlight: 'light', sans-serif;
 $hmedium: 'medium', sans-serif;
@@ -36,8 +46,20 @@ $gray-9: #282e47;
 $gray-10: #f7f8fb;
 $gray-11: #cccccc;
 $gray-12: #f2f2f2;
-$col1: #712a81;
-$col2: #4f1b5b;
+$col:#045C7E;
+$col1: #0E2D3B;
+$aqua: #00DCDA;
+$purple: #5A58C4;
+$letterColor: #2E3649;
+$bgsSection: #2E3649;
+$bgsinputs: #F1F1F1;
+$input-bg: #F1F1F1;
+$bgsSubmit: #5A58C4;
+$colorFooter: #2E3649;
+$azulitoBajito: #33B8F5;
+
+
+$col2: #2E3649;
 $col3: #150519;
 $col4: #f3e4f7;
 $col5: #f36d21;

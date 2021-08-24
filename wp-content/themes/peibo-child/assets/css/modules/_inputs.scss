@@ -5,7 +5,7 @@
   form {
     @include margin(0 null 20px null);
     label {
-      font-size: rem(14px); color: $white;
+      font-size: rem(14px); color: $letterColor;
       a {
         color: $col1; text-decoration: none;
         &:hover {
@@ -24,7 +24,7 @@
      & input[type="text"],
      & input[type="email"],
      & input[type="password"] {
-        width: 100%; border: 0; outline: 0; padding: 17px 17px 10px; border: 0.5px solid $col8; box-shadow: none; background-color: $white!important; border-radius: 0!important; @include fluid-type(13px, 16px, 320px, 1200px);
+        width: 100%; border: 0; outline: 0; padding: 17px 17px 10px; border: none !important; box-shadow: none; background-color: $bgsinputs !important; border-radius: 0!important; @include fluid-type(13px, 16px, 320px, 1200px);
         &:invalid {
           outline: 0;
         }
@@ -50,7 +50,7 @@
         @include position(absolute, 15px null null 0); width: 100%; color: $col8; cursor: text; @include transition(0.2s all); margin: 0; padding: 0 0 0 17px; height: calc(100% + 1px); @include box-sizing(border-box); text-transform: uppercase;
       }
       textarea {
-        width: 100%; border: 0; outline: 0; padding: 17px 17px 10px; height: auto; border: 0.5px solid $col8; box-shadow: none; background-color: $white!important; border-radius: 0!important; @include fluid-type(13px, 16px, 320px, 1200px); margin-bottom: 0; @include box-sizing(border-box);
+        width: 100%; border: 0; outline: 0; padding: 17px 17px 10px; height: auto; border: none; box-shadow: none; background-color: $bgsinputs !important; border-radius: 0!important; @include fluid-type(13px, 16px, 320px, 1200px); margin-bottom: 0; @include box-sizing(border-box);
         &:invalid {
           outline: 0;
         }
@@ -95,7 +95,7 @@
     //   }
     // }
     // button[type="submit"], input[type="submit"] {
-    //   width: auto; height: 40px; padding: 0 30px; margin: 0 0 0 0; text-transform: uppercase; text-align: center; color: $white; display: inline-block; border: 1px solid $col2; @include box-sizing(border-box); line-height: 38px; font-size: rem(16px); cursor: pointer; position: relative; overflow: hidden; border-radius: 20px; background-color: $col2; @include transition(all 0.23s); box-shadow: 0 0 5px rgba($black, 0.25);
+    //   width: auto; height: 40px; padding: 0 30px; margin: 0 0 0 0; text-transform: uppercase; text-align: center; color: $white; display: inline-block; border: 1px solid $col2; @include box-sizing(border-box); line-height: 38px; font-size: rem(16px); cursor: pointer; position: relative; overflow: hidden; border-radius: 25%;; background-color: $bgsSubmit !important; @include transition(all 0.23s); box-shadow: 0 0 5px rgba($black, 0.25);
     //   &:hover {
     //     background-color: $col3; color: $white; border: 1px solid $col3;
     //   }

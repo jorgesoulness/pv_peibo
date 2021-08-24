@@ -2,10 +2,22 @@
    Layout/Main
    ======================= */
 
+@keyframes bola2 { transform:  rotateZ(0deg);}  
+    
+
+
+@keyframes bola1 { 
+    from {transform: translate(0px); -o-transform: translate(0px);}  
+    to {transform: translate(200px); -o-transform: translate(200px);}      
+
+}
+
 main {
   width: 100%; height: auto; position: relative; padding: 0; margin: 0; z-index: 3;
   &.PageContainer {
     min-height: 100vh; @include display(flex); @include flex-direction(column); @include flex-wrap(wrap);
+    overflow-y: hidden;
+overflow-x: hidden;
   }
 }
 article {
@@ -44,6 +56,785 @@ article {
 }
 
 // Sections
+
+.bgsSection1{
+  
+  padding-left: 12% !important;
+padding-top: 11%;
+  h1{
+    font-family: $sofiaBold;
+    font-size: 2.7em;
+    text-align: center;
+    width: 85%;
+    padding-top: 5%;
+  }
+  label,p{
+    font-family: $sofiaRegular;
+    font-size: 12px;
+  }
+  .noMargin{
+    margin:0%;
+    padding: 0%;
+    hr.hr{
+      border-top: 5px solid $aqua;
+      width: 100%;
+    }
+    label{
+      font-size: 1.3em !important;
+      letter-spacing: 1px;
+      font-weight: lighter;
+      text-align: center;
+      padding: 7% 4%;
+    }
+  }
+
+  ul{
+    list-style: none;
+    margin-left: -30%;
+    li{
+        float: left !important;
+        margin: 0% !important;
+        padding-top: 4%;
+      img{
+        width: 140px  !important;
+        position: inherent !important;
+      }
+    }
+  }
+  
+
+  img.celular{
+    width: 200% !important;
+    position: absolute;
+    right: -30%;
+    z-index:1;
+  }
+
+}
+
+.preSection{
+  background-image:  url("#{$imgR}curva2.png"),
+                     url("#{$imgR}curva2.png") !important;
+  background-color: transparent;
+background-repeat: no-repeat;
+background-position: left;
+height: 95vh;
+  position: relative;
+  background-size: 80%;
+  background-position-y: -10%;
+  background-position-x: -190%;
+}
+
+.section2{
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  padding: 25% 1%;
+  -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0;
+  box-shadow: 0px 1px 25px 4px #b0aeb0;
+  height: 60vh !important;
+  width: 90%;
+margin-left: -10% !important;
+
+}
+.columnSection2{
+.row{
+  .col-sm-3{
+    text-align: center;
+    margin: 2% 0%;
+  }
+}
+  height: auto !important;
+  padding-bottom: 5%;
+    div> div>img.iconSection{
+      width: 20%;
+    }
+    ul{
+      list-style: none;
+      h3{
+        color: $purple;
+        font-size: 1em;
+        text-align: center;
+        padding-top: 5%;
+        letter-spacing: 2px;
+        font-family: $sofiaBold;
+        font-weith: bold;
+        white-space: pre-wrap;
+      }
+      label{
+        color: $letterColor;
+      }
+    }
+  }
+
+.mask{
+  margin-top: -10%;
+  z-index: 1;
+  background-color: transparent;
+  img.mask{
+  animation: anim1 2s ease-in-out alternate infinite;
+     -webkit-animation: anim1 2s ease-in-out alternate infinite;
+         transform-origin: 0px 60px;
+         animation-name: bola1;
+         animation-duration: 8000ms;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+   
+         -webkit-transform-origin: 0px 60px;
+         -webkit-animation-name: bola1;
+         -webkit-animation-duration: 4000ms;
+         -webkit-animation-iteration-count: infinite;
+         -webkit-animation-timing-function: linear;
+    position: absolute;
+    display: inline;
+    left: 65%;
+    top: 39%;
+    width:50%;
+  }
+
+}
+
+
+.contentContacto{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin-left: 0% !important;
+  padding: 4% !important;
+
+}
+
+form.contentFrm{
+  text-aling:center !important;
+
+}
+
+.sectionTar{
+  
+  background-color: $bgsSection;
+  min-height: 50vh;
+  padding: 3%;
+  img.iconTar{
+    width: 100% !important;
+  }
+
+  .contCvv{
+  small{
+  color: $azulitoBajito;
+   font-size: 2em; 
+   font-family: $sofiaBold;
+   letter-spacing: 2px;
+   display: inline;
+    position: absolute;
+    left: -30px;
+    top: 37%;
+ }
+    padding-top: 10%;
+    h3, label{
+      color: $white;
+      
+    }
+    h3{
+      font-size: 2.3em;
+      letter-spacing: 2px;
+      font-family: $sofiaBold;
+    }
+    label{
+      margin-top: 3%;
+      letter-spacing: 2px;
+      font-family: $sofiaRegular;
+      font-weight: lighter;
+      font-size: 18px; 
+    }
+    div>ul{
+      list-style: none;
+    }
+
+    h1.cvvGene{
+      color: $azulitoBajito;
+       font-size: 8em; 
+       font-family: $sofiaBold;
+       letter-spacing: 2px;
+       margin-left: 4%;
+      position: relative;
+      right: 0%;
+    }
+  }
+  
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex > * {
+  order: 0;
+}
+
+.uno {
+ order: 1;
+}
+
+.dos {
+ order: 2;
+}
+
+.tres {
+ order: 3;
+}
+
+
+
+.sectionStores{
+
+  background-color: $white;
+  min-height: 50vh;
+  padding: 3%;
+  h3{
+    color: $letterColor;
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-family: $sofiaRegular;
+    strong{
+      color:$aqua;
+    }
+  }
+  ul{
+    margin-top: 0% !important;
+    list-style: none;
+    li{
+      float: left;
+    }
+  }
+}
+
+.mask2{
+  margin-top: 10%;
+  z-index: 1;
+  background-color: transparent;
+  img.mask2{
+    position: absolute;
+    right: 70%;
+    height:20%;
+    display: inline;
+  }
+
+  h2{
+    color: $letterColor;
+    font-size: 5em;
+    font-family: sofiaBold;
+    letter-spacing: 2px;
+
+    strong{
+      color: $purple;
+    }
+  }
+
+  p{
+    font-family: $sofiaRegular;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  h4{
+    color: $letterColor;
+    font-size: 2.5em;
+    font-family: $sofiaBold;
+    letter-spacing: 2px;
+    text-align: left !important;
+    font-weight: bold;
+  }
+
+}
+
+.sectionQueremos{
+  width: 80%;
+  margin-left: 20%;
+  padding: 4% 0%;
+  background-color: $purple;
+  h3,p{
+    color: $white;
+  }
+  h3{
+    font-family: $sofiaBold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+  p{
+    font-family: $sofiaRegular;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: lighter !important;
+    width: 90%;
+  }
+
+  div.offset-sm-3{
+    margin-left: 20% !important;
+  }
+
+}
+
+.sectionEresEmp{
+   padding:4% 0%;
+  background: none !important;
+  h2{
+    color: $letterColor;
+    font-size: 5em;
+    font-family: sofiaBold;
+    letter-spacing: 2px;
+  }
+  a.btnMoreInf{
+    background-color: $aqua;
+    color: $white;
+    border-radius: 30px;
+    padding: 2%;
+    width: auto !important;
+    font-size: 1.3em;
+    font-family: $sofiaRegular;
+    margin-bottom:5%;
+  }
+
+  h2.empresas{
+    color: $letterColor;
+    font-size: 3.5em;
+    font-family: sofiaBold;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  a.btnMoreInfEmpresa{
+     background-color: $purple;
+    color: $white;
+    border-radius: 30px;
+    padding: 2%;
+    width: auto !important;
+    font-size: 1em;
+    font-family: $sofiaRegular;
+    margin-bottom:5%;
+  }
+}
+
+.contentFrm{
+z-index: 10;
+  background-color: $white;
+  h2{
+    font-family: $sofiaBold;
+    letter-spacing: 2px;
+    color: $letterColor;
+    font-size:2em;
+    margin-top: 3%;
+  }
+  label{
+    font-family: $sofiaBold;
+  }
+  .btnSubmit{
+  margin-top: 5%;
+    border-radius: 25px;
+    min-width: 120px;
+    color: $white;
+    font-family:  $sofiaBold;
+     background-color: $bgsSubmit;
+     border: none;
+  }
+    input[type="text"],input[type="email"],input[type="password"], textArea {
+         border: none !important; box-shadow: none; background-color: $bgsinputs !important; border-radius: 0!important;
+      }
+
+
+}
+
+.bgsImgContact{
+      margin: 0% !important;
+      padding: 0% !important;
+      img{
+        width: 100%;
+      }
+    }
+
+
+
+
+/* *************   Page privacy           ********************** */
+
+.contentInformativaText{
+  display: flex;
+}
+
+.customPadding{
+  padding-left: 8% !important;
+}
+
+.contCabeceraInfo {
+    background-image: url("../img/cabeceraInformativa.png"), url("../img/cabeceraInformativa.png") !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 30vh;
+    position: relative;
+    background-size: 200%;
+}
+
+ .page-privacidad{
+
+        margin-right: 0px !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+          h1{
+            font-family: $sofiaBold;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            margin-left: 2%;
+          }
+
+          p{
+
+            font-family: $sofiaRegular;
+            font-size: 1em;
+            letter-spacing: 2px;
+          }
+
+          img{
+            text-align: center !important;
+            margin: 10% 0%;
+            width: 100%;
+          }
+          label{
+              font-style: italic;
+              font-weight: lighter;
+              letter-spacing: 1px;
+              font-family: $sofiaRegular;
+              margin-left: 2% !important;
+
+          }
+       }
+
+ .maskLegales{
+    background-image:  url("#{$imgR}curva5.png"),
+                       url("#{$imgR}curva5.png") !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: absolute;
+    background-size: 40%;
+    background-position-y: 155%;
+    width: 100%;
+    background-position-x: 100% !important;
+
+ }
+
+ .maskEmpresas{
+
+    background-image:  url("#{$imgR}empresas/viaje.png"),
+                       url("#{$imgR}empresas/viaje.png") !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: absolute;
+    background-size: 40%;
+    background-position-y: 155%;
+    width: 50%;
+    background-position-x: 100% !important;
+ }
+
+
+
+
+ 
+
+  .maskLegalesBottom{
+    background-image:  url("#{$imgR}curva0.png"),
+                       url("#{$imgR}curva0.png") !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 60vh;
+position: absolute;
+background-size: 100%;
+background-position-y: 75%;
+width: 100%;
+background-position-x: 88%;
+left: 35%;
+ }
+
+
+
+
+ 
+
+/* *************  end Page privacy           ********************** */
+
+
+
+/* ************** section empresas  *************************** */
+
+
+.sectionQueremos.empresas{
+  width: 100% !important;
+  margin-left: 0% !important;
+  padding: 4% 0%;
+  background-color: $purple;
+  h3,p{
+    color: $white;
+  }
+  h3{
+    font-family: $sofiaBold;
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+  p{
+    font-family: $sofiaRegular;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: lighter !important;
+    width: 90%;
+  }
+
+  div.offset-sm-3{
+    margin-left: 20% !important;
+  }
+
+}
+
+.mask2.empresas{
+  margin-top: -2% !important;
+  z-index: 1;
+  background-color: transparent;
+  img.mask2{
+    position: absolute;
+left: 56%;
+height: 20% !important;
+display: inline;
+bottom: 25%;
+  }
+
+  h2{
+    color: $letterColor;
+    font-size: 3.5em;
+    font-family: sofiaBold;
+    letter-spacing: 2px;
+
+    strong{
+      color: $purple;
+    }
+  }
+
+  p{
+    font-family: $sofiaRegular;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  h4{
+    color: $letterColor;
+    font-size: 2.5em;
+    font-family: $sofiaBold;
+    letter-spacing: 2px;
+    text-align: left !important;
+    font-weight: bold;
+  }
+
+}
+
+
+.listEmpresas{
+  margin-left: -5% !important;
+  list-style: none;
+  li{
+    margin: 3% 0% !important;
+    color: white;
+    font-family: $sofiaRegular; 
+    font-size: 1.2rem;
+  }
+}
+
+p span, p ul {
+  display: block;
+}
+
+.listTarEmpresas{
+  list-style: none;
+  color: $aqua;
+}
+
+
+.titleCash{
+  color: white;
+  font-size: 3.1em;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 7% 0% !important;
+  font-family: $sofiaBold;
+}
+.titleNomina{
+  color: $letterColor;
+  font-size: 3.5em;
+  letter-spaciing: 3px;
+  font-weight: bold;
+  font-family: $sofiaBold;
+}
+
+.parCash{
+  color: white;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  font-family: $sofiaRegular;
+
+}
+
+.parNomina{
+  color: $letterColor;
+letter-spacing: 2px;
+font-weight: lighter;
+font-size: 1.2rem;
+font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
+margin: 5% 0%;
+}
+
+.parNomina2{
+  color: $bgsSubmit !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.coloBlack{
+  li{
+    color: $letterColor !important;
+    float: inherit !important;
+  }
+}
+
+.bgsSectionEmpresas{
+  padding-top: 9%;
+  background-image:  url("#{$imgR}/empresas/icon-empresas.png"),
+                     url("#{$imgR}/empresas/icon-empresas.png") !important;
+  background-color: transparent;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 110%;
+  height: 95vh;
+  background-position-y: 100%;
+  background-position-x: 151%;
+
+  h1{
+    font-family: $sofiaBold;
+    font-size: 3.4em;
+    letter-spacing: 3px;
+    font-weight: revert;
+  }
+  label,p{
+    font-family: $sofiaRegular;
+    font-size: 12px;
+  }
+  .noMargin{
+    margin:0%;
+    padding: 0%;
+    hr.hr{
+      border-top: 5px solid $aqua;
+      width: 100%;
+    }
+    label{
+      font-size: 1.3em !important;
+      letter-spacing: 1px;
+      font-weight: lighter;
+    }
+  }
+
+  ul{
+    list-style: none;
+    li{
+        float: left !important;
+        margin: 0 -3% !important;
+        padding-top: 4%;
+      img{
+        width: 70%  !important;
+        position: inherent !important;
+      }
+    }
+  }
+  
+
+  img.celular{
+    width: 150% !important;
+    position: absolute;
+    right: -50%;
+  }
+
+}
+
+.contentICon{
+      margin: 0%;
+    padding: 0%;
+    text-align: center !important;
+    display: flex;
+    justify-content: center !important;
+}
+
+.columnSection2.empresas{
+  height: auto;
+  padding-bottom: 5%;
+    div> div>img.iconSection{
+      width: 100px;
+      margin-bottom: 2%;
+    }
+    ul{
+      text-aling: center !important;
+      list-style: none;
+      h3{
+        margin-top: 3%;
+        color: #2E3649;
+        font-size: 1.4em;
+        letter-spacing: 2px;
+        font-family: $sofiaRegular;
+        font-weight: 900 !important;
+        white-space: pre-wrap;
+      }
+      label{
+        margin-top: 2%;
+        font-size: 15px;
+        text-aling: center !important;
+        color: #2E3649;
+        letter-spacing: 0px;
+        font-weight: lighter !important;
+        font-family: $sofiaRegular;
+        width: 90%;
+      }
+    }
+  }
+
+.mask{
+  margin-top: -10%;
+  z-index: 1;
+  background-color: transparent;
+  img.mask{
+  animation: anim1 2s ease-in-out alternate infinite;
+     -webkit-animation: anim1 2s ease-in-out alternate infinite;
+         transform-origin: 0px 60px;
+         animation-name: bola1;
+         animation-duration: 8000ms;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+   
+         -webkit-transform-origin: 0px 60px;
+         -webkit-animation-name: bola1;
+         -webkit-animation-duration: 4000ms;
+         -webkit-animation-iteration-count: infinite;
+         -webkit-animation-timing-function: linear;
+    position: absolute;
+    display: inline;
+    left: 65%;
+    top: 39%;
+    width:50%;
+  }
+
+}
+/* ************** end empresas ******************************** */
+
 .hero-sec {
   width: 100%; height: 400px; @include position(relative, null null null null); padding: 0; margin: 0; background-attachment: local; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden;
   & .contHero {
@@ -408,12 +1199,11 @@ article {
     a img.alignleft {float:left; margin:0 1em 1em 0}
     a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
   }
-  @media all and (min-width: 768px) {
-    padding: 70px 0;
-    & .rte {
-      margin: 40px 0 0;
-    }
-  }
+
+
+
+
+
   @media all and (min-width: 992px) {
     padding: 80px 0;
     & .rte {
@@ -475,6 +1265,11 @@ article {
   }
   @media all and (min-width: 768px) {
     margin: 0 auto;
+
+
+
+
+
   }
   @media all and (min-width: 992px) {
     width: 320px; height: 320px;
@@ -602,3 +1397,358 @@ article {
   //   height: 100vh;
   // }
 }
+
+
+
+
+
+
+
+  /* estilos desktop */
+  @media all and (min-width: 768px) {
+
+     .maskEmpresas{
+
+        background-image:  url("#{$imgR}empresas/viaje.png"),
+                           url("#{$imgR}empresas/viaje.png") !important;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: absolute;
+        background-size: 55%;
+        background-position-y: 0%;
+        width: 100%;
+        background-position-x: 140% !important;
+        z-index: 5;
+     }
+
+    .contEm{
+        h3{
+          font-size: 2em;
+          font-family: $sofiaBold;
+          text-align: center;
+        }
+        label{
+          font-size: 1rem;
+          font-family: $sofiaRegular;
+          text-align: center;
+        }
+    }
+    .maskTerminos{
+      background-image:  url("#{$imgR}curva7.png"),
+                         url("#{$imgR}curva7.png") !important;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      height: 90vh;
+      position: absolute;
+      background-size: 36%;
+      background-position-y: 30%;
+      width: 100%;
+      background-position-x: 100% !important;
+
+   }
+
+    .maskLegalesMiddle{
+    background-image:  url("#{$imgR}curva6.png"),
+                       url("#{$imgR}curva6.png") !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: absolute;
+    background-size: 30%;
+    background-position-y: 70%;
+    width: 100%;
+    background-position-x: -15% !important;
+
+ }
+
+ .maskLegalesBottom{
+    background-image:  url("#{$imgR}curva0.png"),
+                       url("#{$imgR}curva0.png") !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 40vh;
+    position: absolute;
+    background-size: 35%;
+    background-position-y: 35%;
+    width: 100%;
+    background-position-x: 115% !important;
+    z-index: 10 !important;
+    margin-bottom: 5%;
+    left: inherit;
+ }
+    .page-privacidad{
+
+  margin-right: 0px !important;
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+        h1{
+          font-family: $sofiaBold;
+          font-size: 3em;
+          letter-spacing: 2px;
+        }
+
+        p{
+
+          font-family: $sofiaRegular;
+          font-size: 1em;
+          letter-spacing: 2px;
+        }
+
+        img{
+          text-align: center;
+          margin: 5% 0%;
+          width: 70%;
+        }
+        label{
+            font-style: italic;
+            font-weight: lighter;
+            letter-spacing: 1px;
+            font-family: $sofiaRegular;
+
+        }
+     }
+
+    .customPadding{
+      padding-left: inherit !important;
+    }
+    
+    .preSection{
+
+      background-size: 31%;
+      background-repeat: no-repeat;
+      background-position: left;
+      height: 95vh;
+      background-position-y: 100%;
+      background-position-x: -10%;
+
+        z-index: 2;
+        position: relative;
+    }
+
+    .bgsSection1 {
+    padding-left: inherit !important;
+    padding-top: 9%;
+    background-image:  url("#{$imgR}curva0.png"),
+                       url("#{$imgR}curva0.png") !important;
+    background-color: transparent;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 110%;
+    height: 95vh;
+    background-position-y: 100%;
+    background-position-x: 110%;
+        height: 110vh;
+    }
+
+    .bgsSection1{
+      
+      h1{
+        font-size: 3.4em !important;
+        text-align: left;
+        width: 100%;
+        padding-top: 0%;
+      }
+      label,p{
+        font-family: $sofiaRegular;  
+        font-size: 12px;
+      }
+      .noMargin{
+        margin:0%;
+        padding: 0%;
+        hr.hr{
+          border-top: 5px solid $aqua;
+          width: 100%;
+        }
+        label{
+          font-size: 1.3em !important;
+          letter-spacing: 1px;
+          font-weight: lighter;
+          text-align: left !important;
+          padding: 0% !important;
+        }
+      }
+
+      ul{
+        list-style: none;
+        margin-left: 0;
+        li{
+            float: left !important;
+            margin: 0 -3% !important;
+            padding-top: 4%;
+          img{
+            width: 70%  !important;
+            position: inherent !important;
+          }
+        }
+      }
+      
+
+      img.celular{
+        width: 150% !important;
+        position: absolute;
+        right: -22%;
+        z-index: inherit;
+      }
+
+    }
+
+
+    .section2{
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 25px;
+        padding: 3% 1%;
+        -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0;
+        box-shadow: 0px 1px 25px 4px #b0aeb0;
+        height: 50vh !important;
+        margin-left: 0% !important;
+        text-aling : left;
+
+      }
+    .columnSection2{
+      .row{
+        .col-sm-3{
+          text-align: left !important;
+          margin: 0% !important;
+        }
+      }
+        height: auto;
+        padding-bottom: 5%;
+          div> div>img.iconSection{
+            width: 100%;
+          }
+          ul{
+            list-style: none;
+            h3{
+              color: $purple;
+              font-size: 1.5em !important;
+              letter-spacing: 2px;
+              font-family: $sofiaRegular;
+              font-weith: bold;
+              white-space: pre-wrap;
+              text-align: left !important;
+            }
+            label{
+              color: $letterColor;
+            }
+          }
+        }
+
+        .listSociales{
+          margin-left: -15% ;
+        }
+
+
+
+
+        .bgsImgContact{
+          margin: 0% !important;
+          padding: 0% !important;
+          img{
+            width: 110%;
+          }
+        }
+
+
+        .sectionTar{
+  
+          background-color: $bgsSection;
+          min-height: 50vh;
+          padding: 3%;
+          img.iconTar{
+            width: 100% !important;
+          }
+
+          .contCvv{
+          small{
+          color: $azulitoBajito;
+           font-size: 2em; 
+           font-family: $sofiaBold;
+           letter-spacing: 2px;
+           display: inline;
+            position: absolute;
+            left: -30px;
+            top: 37%;
+         }
+            padding-top: 10%;
+            h3, label{
+              color: $white;
+              
+            }
+            h3{
+              font-size: 2.3em;
+              letter-spacing: 2px;
+              font-family: $sofiaBold;
+            }
+            label{
+              margin-top: 3%;
+              letter-spacing: 2px;
+              font-family: $sofiaRegular;
+              font-weight: lighter;
+              font-size: 18px; 
+            }
+            div>ul{
+              list-style: none;
+            }
+
+            h1.cvvGene{
+              color: $azulitoBajito;
+               font-size: 8em; 
+               font-family: $sofiaBold;
+               letter-spacing: 2px;
+               margin-left: 4%;
+              position: absolute;
+              right: 0%;
+            }
+          }
+          
+        }
+
+        .uno {
+         order: 2;
+        }
+
+        .dos {
+         order: 3;
+        }
+
+        .tres {
+         order: 1;
+        }
+
+
+
+        .contCabeceraInfo{
+            background-image:  url("#{$imgR}cabeceraInformativa.png"),
+                               url("#{$imgR}cabeceraInformativa.png") !important;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: unset;
+            height: 60vh;
+            position: relative;
+            background-size: 100%;
+          }
+
+
+
+  }
+
+/* end estilos desktop */
+
+
+@media all and (min-width: 1200px) {
+    
+    .bgsSection1 {
+        height: 105vh;
+    }
+
+
+   .listSociales{
+          margin-left: -12% !important;
+        }
+
+        
+
+ }
+

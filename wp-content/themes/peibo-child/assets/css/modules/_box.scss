@@ -1,282 +1,199 @@
 // ===== BOX
 
-.boxThumbServicios {
-  width: 100%; height: 60px; margin: 0; padding: 0; position: relative; border-bottom: none; @include box-sizing(border-box); background-color: transparent; overflow: hidden; cursor: pointer; @include transition(background-color 0.45s ease);
-  &__icono {
-    width: 100%; height: 100%; padding: 0; margin: 0; @include position(absolute, 0 null null 0); @include displayFlex(flex, column, center, center, wrap); @include transform(translateY(0)); @include transition(transform 300ms ease-in-out 0.25s, opacity 250ms ease-in-out 0.15s); opacity: 1;
-    &--circle {
-      width: 43px; height: 43px; margin: 0; padding: 0; border: 1px solid $col9; @include box-sizing(border-box); border-radius: 50%; overflow: hidden; position: relative;
-      & img {
-        width: 28px; height: auto; padding: 0; margin: 0; display: block; @include position(absolute, 50% null null 50%); border: none; @include transform(translate(-50%, -50%));
-      }
-    }
+.curve {
+  @include position(absolute, 0 null null null); padding: 0; margin: 0; z-index: 1000; background-position: center center; background-repeat: no-repeat; background-size: cover; width: 200px; height: 280px; background-image: url('#{$imgR}curva2.png');
+  &__topLeft {
+    left: 0; @include transform(translate(-80px, -360px));
   }
-  &__titulo {
-    display: none;
+  &__topRight {
+    right: 0; @include transform(translate(120px, -320px));
   }
   @media all and (min-width: 640px) {
-    height: 100px;
-    &__icono {
-      &--circle {
-        width: 65px; height: 65px; border: 1px solid $col9;
-        & img {
-          width: 40px;
-        }
-      }
+    width: 250px; height: 350px;
+    &__topLeft {
+    @include transform(translate(-140px, -316px));
+    }
+    &__topRight {
+      @include transform(translate(100px, -335px));
     }
   }
   @media all and (min-width: 768px) {
-    border-bottom: 0.5px solid $col8; height: 120px; 
-    &__icono {
-      @include transition(transform 300ms ease-in-out 0.25s, opacity 250ms ease-in-out 0.15s); opacity: 1;
-      &--circle {
-        width: 80px; height: 80px;
-        & img {
-          width: 50px;
-        }
-      }
+    &__topRight {
+      @include transform(translate(95px, -250px));
     }
-    &__titulo {
-      width: 100%; height: 100%; padding: 0; margin: 0; @include position(absolute, 0 null null 0); @include displayFlex(flex, column, center, center, wrap); @include transform(translateY(100%)); opacity: 0; @include transition(transform 300ms ease-in-out 0.30s, opacity 300ms ease-in-out 0.20s);
-      & h4 {
-        color: $white; margin: 0; padding: 0; text-align: center; @include fluid-type(14px, 16px, 768px, 1200px);
-      }
+  }
+  @media all and (min-width: 992px) {
+    width: 300px; height: 420px;
+    &__topLeft {
+    @include transform(translate(-190px, -345px));
     }
-    &:before {
-      content: ''; width: 100%; height: 10px; background-color: $col1; @include position(absolute, 0 null null 0);
+    &__topRight {
+      @include transform(translate(120px, -320px));
     }
-    &:hover {
-      background-color: $col5; border-bottom: 0.5px solid $col5;
-      & .boxThumbServicios__icono {
-        @include transform(translateY(-100%)); opacity: 0;
-      }
-      & .boxThumbServicios__titulo {
-        @include transform(translateY(0%)); opacity: 1;
-      }
+  }
+  @media all and (min-width: 1200px) {
+    width: 350px; height: 490px;
+    &__topLeft {
+    @include transform(translate(-200px, -395px));
     }
-    &[data-numbre-box="0"] {
-      & .boxThumbServicios__icono {
-        &--circle {
-          border: 1px solid $col1;
-        }
-      }
-      &:before {
-        background-color: $col1;
-      }
-      &:hover {
-        background-color: $col1; border-bottom: 0.5px solid $col1;
-      }
+  }
+  @media all and (min-width: 1366px) {
+    &__topLeft {
+    @include transform(translate(-200px, -360px));
     }
-    &[data-numbre-box="1"] {
-      & .boxThumbServicios__icono {
-        &--circle {
-          border: 1px solid $col5;
-        }
-      }
-      &:before {
-        background-color: $col5;
-      }
-      &:hover {
-        background-color: $col5; border-bottom: 0.5px solid $col5;
-      }
-    }
-    &[data-numbre-box="2"] {
-      & .boxThumbServicios__icono {
-        &--circle {
-          border: 1px solid $col9;
-        }
-      }
-      &:before {
-        background-color: $col9;
-      }
-      &:hover {
-        background-color: $col9; border-bottom: 0.5px solid $col9;
-      }
-    }
-    &[data-numbre-box="3"] {
-      & .boxThumbServicios__icono {
-        &--circle {
-          border: 1px solid $col13;
-        }
-      }
-      &:before {
-        background-color: $col13;
-      }
-      &:hover {
-        background-color: $col13; border-bottom: 0.5px solid $col13;
-      }
-    }
-    &[data-numbre-box="4"] {
-      & .boxThumbServicios__icono {
-        &--circle {
-          border: 1px solid $col10;
-        }
-      }
-      &:before {
-        background-color: $col10;
-      }
-      &:hover {
-        background-color: $col10; border-bottom: 0.5px solid $col10;
-      }
-    }
-    &[data-numbre-box="5"] {
-      & .boxThumbServicios__icono {
-        &--circle {
-          border: 1px solid $col14;
-        }
-      }
-      &:before {
-        background-color: $col14;
-      }
-      &:hover {
-        background-color: $col14; border-bottom: 0.5px solid $col14;
-      }
-    }  
   }
 }
 
-// Box Slider Servicios Home
-.boxServiciosHome {
-  width: 100%; height: auto; margin: 0; padding: 0; position: relative; @include box-sizing(border-box); @include displayFlex(flex, row, center, center, wrap);
-  &__image {
-    @include flex(0 0 100%); max-width: 100%; position: relative; width: 100%; min-height: 1px; @include box-sizing(border-box); margin: 0; padding: 0 20px;
-    @include transform(translateX(-20%)); opacity: 0; @include filter(blur(20px));
-    @include transition(opacity 1.5s ease 0.55s, transform 0.5s ease-out 0.45s, filter 0.5s ease 0.45s);
+.blogSec {
+  width: 100%; height: auto; padding: 0; margin: 150px 0 80px; @include box-sizing(border-box); position: relative;
+  &__main {
+    position: relative;
+  }
+  &__title {
+    margin: 0 0 50px; padding: 0; font-family: sofiaBold; @include fluid-type(22px, 60px, 320px, 1200px); color: $col2;
+  }
+  &__hr {
+    border-top: 2px solid #8B90A3; margin-top: 50px; margin-bottom: 50px;
+  }
+}
+.blogSingle {
+  width: 100%; height: auto; padding: 0; margin: 120px 0 80px; @include box-sizing(border-box); position: relative;
+  &__cover {
+    position: relative; width: 100%; max-width: 1400px; height: 220px; margin: 0; padding: 0; overflow: hidden; @include box-sizing(border-box); z-index: 2;
     & img {
-      width: 100%; max-width: 200px; margin: 0 auto 20px; padding: 0; display: block; border: 0;
+      display: block; width: 100%; height: 100%; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover"; position: relative; @include transform(scale(1.0)); @include transition(transform 900ms ease-in-out);
+    }
+    @media all and (min-width: 768px) {
+      height: 320px;
+    }
+  }
+  &__title {
+    @include fluid-type(20px, 55px, 320px, 1200px); font-family: sofiaBold; margin: 0 0 20px; padding: 0; line-height: 1; color: $col2;
+  }
+  &__date {
+    margin: 0 0 20px; padding: 0; @include fluid-type(12px, 14px, 320px, 1200px); line-height: 1; color: $col2; display: block;
+  }
+  &__descSingle {
+    position: relative; width: 100%; margin: 0; padding: 30px 0 0; overflow: hidden; z-index: 1;
+    & p {
+      margin: 0 0 16px; padding: 0; color: $col2; line-height: 1.2; font-family: sofiaRegular; @include fluid-type(13px, 16px, 320px, 1200px);
+    }
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+      color: $col2; line-height: 1.2; font-family: sofiaBold;
+    }
+    & ul, & ol {
+      list-style-type: none; padding: 0 0 0 24px; margin: 0 0 20px; @include box-sizing(border-box);
+      & li {
+        list-style-type: none; position: relative; margin: 0 0 3px; line-height: 1.2; color: $col2; font-family: sofiaRegular; @include fluid-type(13px, 16px, 320px, 1200px);
+        &:before {
+          content: ''; @include position(absolute, 8px null null -15px); width: 6px; height: 6px; background-color: $aqua; border-radius: 50%;
+        }
+      }
+    }
+    & a {
+      text-decoration: underline;
+    }
+    & strong, & b {
+      font-family: $sofiaBold;
+    }
+    img.alignright {float:right; margin:0 0 1em 1em;max-width:100%;height:auto;}
+    img.alignleft {float:left; margin:0 1em 1em 0;max-width:100%;height:auto;}
+    img.aligncenter {display: block; margin-left: auto; margin-right: auto;margin-bottom:rem(16px);max-width:100%;height:auto;}
+    a img.alignright {float:right; margin:0 0 1em 1em;max-width:100%;height:auto;}
+    a img.alignleft {float:left; margin:0 1em 1em 0;max-width:100%;height:auto;}
+    a img.aligncenter {display: block; margin-left: auto; margin-right: auto;max-width:100%;height:auto;}
+    &:before, &:after {
+      content: ''; @include position(absolute, null null null null); padding: 0; margin: 0; z-index: 2; background-position: center center; background-repeat: no-repeat; background-size: cover;
+    }
+    &:before {
+      top: 50%; left: 0; @include transform(translate(-80%, -50%)); width: 600px; height: 600px; background-image: url('#{$imgR}curva6.png');
+    }
+    &:after {
+      top: -29%; right: 20px; @include transform(translate(0, 0)); width: 400px; height: 400px; background-image: url('#{$imgR}curva5.png');
+    }
+    @media all and (min-width: 768px) {
+      padding: 60px 0 0;
+    }
+    @media all and (min-width: 1200px) {
+      &:before {
+        @include transform(translate(-60%, -50%));
+      }
+    }
+  }
+}
+
+.mainBoxBlog {
+  width: 100%; height: auto; padding: 0; margin: 0; position: relative; @include displayFlex(flex, row, center, flex-start, wrap);
+  &__image {
+    width: 100%; height: 200px; @include box-sizing(border-box); padding: 0; margin: 0 0 5px; position: relative; overflow: hidden;
+    & img {
+      display: block; width: 100%; height: 100%; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover"; position: relative; @include transform(scale(1.0)); @include transition(transform 900ms ease-in-out);
+    }
+    @media all and (min-width: 640px) {
+      width: 50%; height: 250px;
+    }
+    @media all and (min-width: 768px) {
+      height: 300px;
     }
   }
   &__desc {
-    @include flex(0 0 100%); max-width: 100%; position: relative; width: 100%; min-height: 1px; @include box-sizing(border-box); margin: 0; padding: 0;
-    @include transform(translateX(20%)); opacity: 0; @include filter(blur(20px));
-    @include transition(opacity 1.5s ease 0.35s, transform 0.5s ease-out 0.25s, filter 0.5s ease 0.25s);
-    & p {
-      font-family: $hlight;
-    }
-    ul, ol {
-      list-style-type: none; padding: 0 0 0 24px; margin: 0 0 20px; @include box-sizing(border-box);
-      & li {
-        list-style-type: none; position: relative; margin: 0 0 3px; font-family: $hlight;
-        &:before {
-          content: ''; @include position(absolute, 50% null null -15px); width: 6px; height: 6px; background-color: $col5; border-radius: 50%; @include transform(translateY(-50%));
-        }
-      }
-    }
-    & .btnServicios {
-      text-align: center;
-      & a {
-        margin: 0;
-        &:last-child {
-          margin: 0;
-        }
-      }
-    }
-  }
-  // @media all and (min-width: 640px) {
-  //   &__image {
-  //     @include flex(0 0 50%); max-width: 50%;
-  //   }
-  //   &__desc {
-  //     @include flex(0 0 50%); max-width: 50%;
-  //   }
-  // }
-  @media all and (min-width: 768px) {
-    &__image {
-      @include flex(0 0 41.666667%); max-width: 41.666667%;
-      & img {
-        max-width: 270px; margin: 0 auto 0;
-      }
-    }
-    &__desc {
-      @include flex(0 0 58.333333%); max-width: 58.333333%;
-      & .btnServicios {
-        text-align: left;
-        & a {
-          margin: 0 10px 0 0;
-          &:last-child {
-            margin: 0;
-          }
-        }
-      }
-    }
-  }
-  @media all and (min-width: 1024px) {
-    &__image {
-      @include flex(0 0 33.333333%); max-width: 33.333333%; padding: 0 30px;
-    }
-    &__desc {
-      @include flex(0 0 66.666667%); max-width: 66.666667%;
-      & .btnServicios {
-        text-align: left;
-        & a {
-          margin: 0 20px 0 0;
-          &:last-child {
-            margin: 0;
-          }
-        }
-      }
-    }
-  }
-  .slick-current & {
-    &__image {
-      @include transform(translateX(0)); opacity: 1; @include filter(blur(0));
-    }
-    &__desc {
-      @include transform(translateX(0)); opacity: 1; @include filter(blur(0));
-    }
-  }
-}
-
-.boxRowNews {
-  width: 100%; height: auto; padding: 0; margin: 0; @include displayFlex(flex, column, center, center, wrap);
-  &__input {
-    &--left {
-      @include flex(1 1 auto); margin: 0 0 10px; padding: 0; width: 100%;
-    }
-    &--right {
-      @include flex(1 1 auto); padding: 0; text-align: center; width: 100%;
-    }
-  }
-  @media all and (min-width: 576px) {
-    @include flex-direction(row);
-    &__input {
-      &--left {
-        @include flex(1 1 auto); width: auto; margin: 0;
-      }
-      &--right {
-        @include flex(0 1 auto); width: auto; margin: 0; text-align: inherit;
-      }
-    }
-  }
-}
-
-.boxDescContact {
-  width: 100%; height: auto; padding: 0; margin: 0; @include displayFlex(flex, column, flex-start, center, wrap);
-  &__items {
-    margin: 0 0 30px; padding: 0 0 30px; border-bottom: 1px solid $col7; @include box-sizing(border-box); width: 100%; height: auto;
-    &:last-child {
-      padding: 0; margin: 0; border-bottom: 0;
-    }
-  }
-}
-.boxContactInfo {
-  width: 100%; height: auto; padding: 0; margin: 0; @include displayFlex(flex, row, flex-start, flex-start, wrap);
-  &__circle {
-    width: 40px; height: 40px; margin: 0 20px 0 0; padding: 0; background-color: $c12; border: 1px solid $col8; color: $col1; line-height: 40px; text-align: center; font-size: rem(22px); border-radius: 50%;
-  }
-  &__text {
-    padding: 10px 0 0; margin: 0; position: relative; @include box-sizing(border-box);
+    width: 100%; height: auto; @include box-sizing(border-box); padding: 0 20px; margin: 0; color: $col2;
     & h4 {
-      color: $col7; margin: 0 0 15px; padding: 0; text-transform: uppercase; @include fluid-type(13px, 16px, 320px, 1200px); font-weight: 500;
+      @include fluid-type(18px, 50px, 320px, 1200px); font-family: sofiaBold; margin: 0; padding: 0; line-height: 1;
     }
-    & p {
-      color: $col12; margin: 0; padding: 0; @include fluid-type(13px, 16px, 320px, 1200px); font-family: $hlight;
-    }
-    & a {
-      color: $col5; text-decoration: none;
-      &:hover {
-        color: $col6;
+    & .rte {
+      width: 100%; height: auto; padding: 0; margin: 0 0 10px; text-align: left;
+      & p {
+        margin: 0; padding: 0; @include fluid-type(13px, 18px, 320px, 1200px); line-height: 1.2;
       }
+    }
+    @media all and (min-width: 640px) {
+      width: 50%;
+    }
+  }
+  &__date {
+    margin: 0 0 5px; padding: 0; @include fluid-type(12px, 15px, 320px, 1200px); line-height: 1;
+  }
+  &__link {
+    display: block; text-align: left; margin: 0; padding: 0; color: $aqua; text-decoration: none; @include fluid-type(14px, 18px, 320px, 1200px); @include transition(all 300ms ease);
+    &:hover {
+      color: $col2;
+    }
+  }
+  &__divider {
+    border-top: 2px solid $aqua; margin-top: rem(16px); margin-bottom: rem(16px); box-sizing: content-box; height: 0; overflow: visible; displya: block;
+  }
+}
+.boxBlog {
+  width: 100%; height: auto; padding: 0; margin: 0 0 15px; position: relative; @include displayFlex(flex, column, flex-start, flex-start, wrap);
+  &__image {
+    width: 100%; height: 190px; @include box-sizing(border-box); padding: 0; margin: 0 0 5px; position: relative; overflow: hidden;
+    & img {
+      display: block; width: 100%; height: 100%; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover"; position: relative; @include transform(scale(1.0)); @include transition(transform 900ms ease-in-out);
+    }
+    @media all and (min-width: 640px) {
+      height: 230px;
+    }
+  }
+  &__desc {
+    width: 100%; height: auto; @include box-sizing(border-box); padding: 0 20px; margin: 0; color: $col2;
+    & h4 {
+      @include fluid-type(16px, 26px, 320px, 1200px); font-family: sofiaBold; margin: 0 0 10px; padding: 0; line-height: 1;
+    }
+    & .rte {
+      width: 100%; height: auto; padding: 0; margin: 0 0 10px; text-align: left;
+      & p {
+        margin: 0; padding: 0; @include fluid-type(13px, 16px, 320px, 1200px); line-height: 1.2;
+      }
+    }
+  }
+  &__date {
+    margin: 0; padding: 0; @include fluid-type(12px, 15px, 320px, 1200px); line-height: 1;
+  }
+  &__link {
+    display: block; text-align: left; margin: 0; padding: 0; color: $aqua; text-decoration: none; @include fluid-type(14px, 17px, 320px, 1200px); @include transition(all 300ms ease);
+    &:hover {
+      color: $col2;
     }
   }
 }

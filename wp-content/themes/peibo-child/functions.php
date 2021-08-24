@@ -57,10 +57,13 @@ function peibo_head() {
   wp_enqueue_style( 'google-peibo-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap', array(), null );
   // CSS
 	wp_enqueue_style('bootstrap',  get_stylesheet_directory_uri() . '/assets/vendor/bootstrap/dist/css/bootstrap.min.css', array(), $versionFiles);
-	wp_enqueue_style('style-min',  get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), $versionFiles);
+	wp_enqueue_style('style-min',  get_stylesheet_directory_uri() . '/assets/css/style.css', array(), $versionFiles);
+	wp_enqueue_style('stylecompress-min',  get_stylesheet_directory_uri() . '/assets/css/stylecompress.min.css', array(), $versionFiles);
   wp_enqueue_style('animate',  get_stylesheet_directory_uri() . '/assets/css/vendor/animate.css', array(), $versionFiles);
   wp_enqueue_style('hover-min',  get_stylesheet_directory_uri() . '/assets/css/vendor/hover-min.css', array(), $versionFiles);
   wp_enqueue_style('progress-css',  get_stylesheet_directory_uri() . '/assets/css/nprogress.css', array(), $versionFiles);
+
+  
   // jQuery
   wp_deregister_script( 'jquery' );
   wp_register_script( 'jquery', get_stylesheet_directory_uri() . '/assets/vendor/jquery/dist/jquery.min.js' );
@@ -85,8 +88,8 @@ function peibo_head() {
 	wp_enqueue_script( 'browser.min', get_stylesheet_directory_uri() . '/assets/js/plugins/browser.min.js', array(), $versionFiles, true);
 	wp_enqueue_script( 'breakpoints.min', get_stylesheet_directory_uri() . '/assets/js/plugins/breakpoints.min.js', array(), $versionFiles, true);
 	wp_enqueue_script( 'parallax.min', get_stylesheet_directory_uri() . '/assets/js/scripts/parallaxscript.min.js', array(), $versionFiles, true);
-	wp_enqueue_script( 'layout.min', get_stylesheet_directory_uri() . '/assets/js/scripts/layoutScripts.min.js', array(), $versionFiles, true);
-	wp_enqueue_script( 'formularios.min', get_stylesheet_directory_uri() . '/assets/js/scripts/frmspeibo.min.js', array(), $versionFiles, true);
+	//wp_enqueue_script( 'layout.min', get_stylesheet_directory_uri() . '/assets/js/scripts/layoutScripts.min.js', array(), $versionFiles, true);
+	//wp_enqueue_script( 'formularios.min', get_stylesheet_directory_uri() . '/assets/js/scripts/frmspeibo.min.js', array(), $versionFiles, true);
 }
 add_action( 'wp_enqueue_scripts', 'peibo_head' );
 
