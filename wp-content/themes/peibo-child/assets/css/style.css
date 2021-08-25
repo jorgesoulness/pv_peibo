@@ -1596,13 +1596,19 @@ article {
 }
 
 form.contentFrm {
-  text-aling: center !important;
+  text-align: center !important;
 }
 
 .sectionTar {
   background-color: #2E3649;
   min-height: 50vh;
-  padding: 3%;
+  padding: 170px 3% 3%;
+  box-sizing: border-box;
+}
+@media all and (min-width: 576px) {
+  .sectionTar {
+    padding: 3%;
+  }
 }
 .sectionTar img.iconTar {
   width: 100% !important;
@@ -2064,9 +2070,14 @@ p span, p ul {
   background-repeat: no-repeat;
   background-position: right;
   width: 110%;
-  height: 95vh;
+  height: auto;
   background-position-y: 100%;
   background-position-x: 151%;
+}
+@media all and (min-width: 1200px) {
+  .bgsSectionEmpresas {
+    height: 95vh;
+  }
 }
 .bgsSectionEmpresas h1 {
   font-family: "sofiaBold", Helvetica, Arial, sans-serif;

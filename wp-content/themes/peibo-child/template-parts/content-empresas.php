@@ -47,10 +47,63 @@ get_header();
               </div>
             </div>
           </section>
-          <section class="container-fluid d-flex justify-content-center preSection animate__animated animate__bounce animate__delay-3s animate__bounceInUp">
+
+          <section class="slideCt animate__animated animate__bounce animate__delay-3s animate__bounceInUp">
+            <div class="slideCt__bgTrans">
+              <div class="sliderCards">
+
+                    <div>
+                      <div class="columnSection2 empresas">
+                        <div class="col-sm-12 d-flex justify-content-center d-flex contentICon">
+                          <img class="iconSection animate__animated animate__bounce animate__delay-4s animate__p" src="/wp-content/themes/peibo-child/assets/img/icons/cash.png" alt="Peibo" />
+                        </div>
+                        <div class="col-sm-12 d-flex justify-content-center  text-center">
+                          <div class="row col-sm-12 d-flex justify-content-center contEm">
+                              <h3>Cash Management.</h3>
+                              <br />
+                            <label>Controla y monitorea tus finanzas desde nuestra aplicación de Cash Management.</label>
+                          </div>
+                        </div>
+                      </div><!-- end.columnSection2 -->
+                    </div><!-- end.itemSlider -->
+                    <div>
+                      <div class="columnSection2 empresas">
+                        <div class="col-sm-12 d-flex justify-content-center contentICon">
+                            <img class="iconSection" src="/wp-content/themes/peibo-child/assets/img/icons/credit.png" alt="Peibo" />
+                        </div>
+                        <div class="col-sm-12 d-flex justify-content-center text-center">
+                          <div class="row col-sm-12 d-flex justify-content-center contEm">
+                            <h3>Tarjeta Nómina.</h3>
+                            <br/>
+                            <label>Solicita la Tarjeta Nómina y disfruta de todos los beneficios que tiene para tus empleados y para ti. <br/>Realiza transferencias y pagos 24/7.</label>
+                          </div>
+                        </div>
+                      </div><!-- end.col-* --> 
+                    </div><!-- end.itemSlider -->
+                    <div>
+                      <div class="columnSection2 empresas">
+                        <div class="col-sm-12 d-flex justify-content-center d-flex contentICon">
+                            <img class="iconSection" src="/wp-content/themes/peibo-child/assets/img/icons/ejecutiva.png" alt="Peibo" />
+                        </div>
+                        <div class="col-sm-12 d-flex justify-content-center  text-center">
+                          <div class="row col-sm-12 d-flex justify-content-center contEm">
+                                <h3>Tarjeta Ejecutiva.</h3>
+                                <br />
+                                <label>Administra los gastos empresariales de tus empleados a través de la Tarjeta Ejecutiva, con la que podrán realizar pagos y disposición de efectivo fácilmente.</label>
+                          </div>
+                        </div>
+                      </div><!-- end.col-* --> 
+                    </div><!-- end.itemSlider -->
+
+                  </div>
+            </div><!-- end.slideCt__bgTrans -->
+          </section><!-- end.slideCt --> 
+
+          <section class="container-fluid d-flex justify-content-center preSection animate__animated animate__bounce animate__delay-3s animate__bounceInUp" style="display: none!important;">
             <div class="row mt-2 mb-2 container section2">
               <div class="col-sm-12">
                 <div class="row">
+
                   <div class="col-sm-4  columnSection2 empresas">
                     <div class="row">
                       <div class="col-sm-12 d-flex justify-content-center d-flex contentICon">
@@ -64,45 +117,45 @@ get_header();
                         </div>
                       </div>
                     </div>
-                    
-                  </div>
+                  </div><!-- end.col-* -->
+
                   <div class="col-sm-4 columnSection2 empresas">
                     <div class="row">
                       <div class="col-sm-12 d-flex justify-content-center contentICon">
                           <img class="iconSection" src="/wp-content/themes/peibo-child/assets/img/icons/credit.png" alt="Peibo" />
-                        </div>
-                        <div class="col-sm-12 d-flex justify-content-center text-center">
-                          <div class="row col-sm-12 d-flex justify-content-center contEm">
+                      </div>
+                      <div class="col-sm-12 d-flex justify-content-center text-center">
+                        <div class="row col-sm-12 d-flex justify-content-center contEm">
                               <h3>Tarjeta Nómina.</h3>
                               <br/>
                               <label>Solicita la Tarjeta Nómina y disfruta de todos los beneficios que tiene para tus empleados y para ti. <br/>Realiza transferencias y pagos 24/7.</label>
-                            </div>
                         </div>
                       </div>
                     </div>
+                  </div><!-- end.col-* --> 
 
-                    <div class="col-sm-4 columnSection2 empresas">
+                  <div class="col-sm-4 columnSection2 empresas">
                     <div class="row">
                       <div class="col-sm-12 d-flex justify-content-center d-flex contentICon">
                           <img class="iconSection" src="/wp-content/themes/peibo-child/assets/img/icons/ejecutiva.png" alt="Peibo" />
-                        </div>
-                        <div class="col-sm-12 d-flex justify-content-center  text-center">
-                          <div class="row col-sm-12 d-flex justify-content-center contEm">
+                      </div>
+                      <div class="col-sm-12 d-flex justify-content-center  text-center">
+                        <div class="row col-sm-12 d-flex justify-content-center contEm">
                               <h3>Tarjeta Ejecutiva.</h3>
                               <br />
                               <label>Administra los gastos empresariales de tus empleados a través de la Tarjeta Ejecutiva, con la que podrán realizar pagos y disposición de efectivo fácilmente.</label>
-                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </div><!-- end.col-* --> 
+
+                </div><!-- end.row --> 
                 
-              </div>
-            </div>
+              </div><!-- end.col-* --> 
+            </div><!-- end.row --> 
           </section>
 
-<section class="mask">
+<section class="secMask mask">
     
   <div class="container-fluid d-flex justify-content-center sectionTar empresas">
     <div class="row container">
