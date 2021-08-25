@@ -3518,7 +3518,7 @@ body.is-preload .bannerInt > .titleInt {
     box-shadow: 0px 1px 25px 4px #b0aeb0;
     height: 50vh !important;
     margin-left: 0% !important;
-    text-aling: left;
+    text-align: left;
   }
 
   .columnSection2 {
@@ -3540,7 +3540,7 @@ body.is-preload .bannerInt > .titleInt {
     font-size: 1.5em !important;
     letter-spacing: 2px;
     font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
-    font-weith: bold;
+    font-weight: bold;
     white-space: pre-wrap;
     text-align: left !important;
   }
@@ -3549,7 +3549,7 @@ body.is-preload .bannerInt > .titleInt {
   }
 
   .listSociales {
-    margin-left: -15%;
+    margin: 0;
   }
 
   .bgsImgContact {
@@ -3644,7 +3644,7 @@ body.is-preload .bannerInt > .titleInt {
   }
 
   .listSociales {
-    margin-left: -12% !important;
+    margin: 0;
   }
 }
 /* ==|====================
@@ -3690,7 +3690,7 @@ body.is-preload .bannerInt > .titleInt {
 }
 
 .listFooter {
-  list-style: none;
+  list-style: none; margin: 0 0 15px; padding: 0;
 }
 .listFooter li label {
   color: #ffffff;
@@ -3710,8 +3710,9 @@ body.is-preload .bannerInt > .titleInt {
 
 .listSociales {
   list-style: none;
-  margin-left: -4%;
-  margin-top: 2%;
+  /* margin-left: -4%;
+  margin-top: 2%; */
+  margin: 15px 0; padding: 0; display: flex;
 }
 .listSociales li {
   float: left;
@@ -4006,8 +4007,7 @@ body.is-preload .bannerInt > .titleInt {
   }
 
   .listSociales {
-    margin-left: -4%;
-    margin-top: 2%;
+    margin: 0;
   }
 }
 /* Modules */
