@@ -222,7 +222,7 @@
     padding: 100px 0 100px;
   }
   &__bgTrans {
-    width: 100%; max-width: 1140px; height: auto; margin: 0 auto; padding: 20px 30px; @include box-sizing(border-box); background: rgba(255, 255, 255, 0.8); border-radius: 25px; -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0; box-shadow: 0px 1px 25px 4px #b0aeb0; position: relative; overflow: hidden;
+    width: 100%; max-width: 1140px; height: auto; margin: 0 auto; padding: 40px 30px 20px; @include box-sizing(border-box); background: rgba(255, 255, 255, 0.8); border-radius: 25px; -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0; box-shadow: 0px 1px 25px 4px #b0aeb0; position: relative; overflow: hidden;
     @media all and (min-width: 768px) {
       background: rgba(255, 255, 255, 0.8); border-radius: 25px; -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0; box-shadow: 0px 1px 25px 4px #b0aeb0; text-align: left;
     }

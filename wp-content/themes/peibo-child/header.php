@@ -32,7 +32,7 @@
             <div class="col-sm-5">
               <ul class="listHeader">
                   <li>
-                    <a href="<?php site_url(''); ?>">
+                    <a href="<?php echo esc_url(site_url('')); ?>">
                       <img src="/wp-content/themes/peibo-child/assets/img/logos/logoHeader.png" width="70%" class="imgHeader" />
                     </a>
                   </li>

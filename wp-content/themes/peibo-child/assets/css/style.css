@@ -2121,7 +2121,7 @@ p span, p ul {
 }
 
 .contentICon {
-  margin: 0%;
+  margin: 0 0 15px;
   padding: 0%;
   text-align: center !important;
   display: -webkit-box;
@@ -2130,6 +2130,9 @@ p span, p ul {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+}
+.contentICon img {
+  width: 100%; max-width: 90px; height: auto; padding: 0; margin: 0;
 }
 
 .columnSection2.empresas {
