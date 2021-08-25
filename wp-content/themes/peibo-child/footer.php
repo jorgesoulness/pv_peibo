@@ -3,7 +3,7 @@
 
         <!-- footer -->
         <footer class="g-footer" data-blur-content>
-          <div class="container" style="z-index:4;">
+          <div class="container" style="z-index:4;position:relative;">
             <div class="row justify-content-ccenter">
               <div class="col-12 col-md-4">
                 <ul class="listFooter">
