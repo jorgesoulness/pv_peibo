@@ -1599,12 +1599,7 @@ form.contentFrm {
   text-align: center !important;
 }
 
-.sectionTar {
-  background-color: #2E3649;
-  min-height: 50vh;
-  padding: 170px 3% 3%;
-  box-sizing: border-box;
-}
+
 @media all and (min-width: 576px) {
   .sectionTar {
     padding: 3%;
@@ -1684,11 +1679,7 @@ form.contentFrm {
           order: 3;
 }
 
-.sectionStores {
-  background-color: #ffffff;
-  min-height: 50vh;
-  padding: 3%;
-}
+
 .sectionStores h3 {
   color: #2E3649;
   font-size: 2em;
@@ -1907,18 +1898,6 @@ form.contentFrm {
   background-position-x: 100% !important;
 }
 
-.maskEmpresas {
-  background-image: url("../img/empresas/viaje.png"), url("../img/empresas/viaje.png") !important;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  height: 60vh;
-  position: absolute;
-  background-size: 40%;
-  background-position-y: 155%;
-  width: 50%;
-  background-position-x: 100% !important;
-}
-
 .maskLegalesBottom {
   background-image: url("../img/curva0.png"), url("../img/curva0.png") !important;
   background-color: transparent;
@@ -1982,12 +1961,7 @@ form.contentFrm {
 .mask2.empresas h2 strong {
   color: #5A58C4;
 }
-.mask2.empresas p {
-  font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
-  letter-spacing: 2px;
-  font-size: 1.3rem;
-  text-align: left;
-}
+
 .mask2.empresas h4 {
   color: #2E3649;
   font-size: 2.5em;
@@ -1997,34 +1971,15 @@ form.contentFrm {
   font-weight: bold;
 }
 
-.listEmpresas {
-  margin-left: -5% !important;
-  list-style: none;
-}
-.listEmpresas li {
-  margin: 3% 0% !important;
-  color: white;
-  font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
-}
+
+
 
 p span, p ul {
   display: block;
 }
 
-.listTarEmpresas {
-  list-style: none;
-  color: #00DCDA;
-}
 
-.titleCash {
-  color: white;
-  font-size: 3.1em;
-  letter-spacing: 2px;
-  font-weight: bold;
-  padding: 7% 0% !important;
-  font-family: "sofiaBold", Helvetica, Arial, sans-serif;
-}
+
 
 .titleNomina {
   color: #2E3649;
@@ -2034,13 +1989,6 @@ p span, p ul {
   font-family: "sofiaBold", Helvetica, Arial, sans-serif;
 }
 
-.parCash {
-  color: white;
-  letter-spacing: 1px;
-  font-weight: lighter;
-  font-size: 1.2rem;
-  font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
-}
 
 .parNomina {
   color: #2E3649;
@@ -2062,17 +2010,43 @@ p span, p ul {
   float: inherit !important;
 }
 
-.bgsSectionEmpresas {
+
+.bgsSectionEmpresasMobile {
   padding-top: 9%;
-  background-image: url("../img//empresas/icon-empresas.png"), url("../img//empresas/icon-empresas.png") !important;
+  background-image: url("../img//empresas/curvaEmpresas1.png"), url("../img//empresas/curvaEmpresas1.png") !important;
   background-color: transparent;
-  background-size: 70%;
   background-repeat: no-repeat;
-  background-position: right;
-  width: 110%;
-  height: auto;
-  background-position-y: 100%;
-  background-position-x: 151%;
+  width: 100%;
+  background-position-y: -255%;
+  background-position-x: -25%;
+  min-height: 100vh;
+  z-index: -2;
+  position: absolute;
+}
+
+
+.slideCt{
+    background-image: url("../img//empresas/curvaEmpresas2.png"), url("../img//empresas/curvaEmpresas2.png") !important;
+  }
+@media all and (min-width:  768px){
+  .bgsSectionEmpresas {
+    padding-top: 9%;
+    background-image: url("../img//empresas/icon-empresas.png"), url("../img//empresas/icon-empresas.png") !important;
+    background-color: transparent;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: auto;
+    background-position-y: 100%;
+    background-position-x: 151%;
+  }
+
+  .bgsSectionEmpresasMobile{
+    display: none;
+  }
+
+
 }
 @media all and (min-width: 1200px) {
   .bgsSectionEmpresas {
@@ -2081,26 +2055,46 @@ p span, p ul {
 }
 .bgsSectionEmpresas h1 {
   font-family: "sofiaBold", Helvetica, Arial, sans-serif;
-  font-size: 3.4em;
-  letter-spacing: 3px;
-  font-weight: revert;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color:  #2E3649;
+  text-align: center;
+  margin-top: : 10% !important;
 }
 .bgsSectionEmpresas label, .bgsSectionEmpresas p {
   font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
   font-size: 12px;
+  color:  #2E3649;
+}
+
+
+.iconHambur{
+  font-size: 2.5em !important;
+  color: #5A58C4;
 }
 .bgsSectionEmpresas .noMargin {
   margin: 0%;
   padding: 0%;
 }
+
+
+.contStore > img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+
 .bgsSectionEmpresas .noMargin hr.hr {
-  border-top: 5px solid #00DCDA;
+  border-top: 5px solid #5A58C4;
   width: 100%;
 }
 .bgsSectionEmpresas .noMargin label {
-  font-size: 1.3em !important;
-  letter-spacing: 1px;
-  font-weight: lighter;
+  font-size: 1.1em !important;
+  text-align: center;
+  font-weight: 500;
+  color:  #2E3649;
+  width: 60%;
 }
 .bgsSectionEmpresas ul {
   list-style: none;
@@ -2117,7 +2111,7 @@ p span, p ul {
 .bgsSectionEmpresas img.celular {
   width: 150% !important;
   position: absolute;
-  right: -50%;
+  right: -65%;
 }
 
 .contentICon {
@@ -2131,6 +2125,7 @@ p span, p ul {
       -ms-flex-pack: center !important;
           justify-content: center !important;
 }
+
 .contentICon img {
   width: 100%; max-width: 90px; height: auto; padding: 0; margin: 0;
 }
@@ -3362,11 +3357,13 @@ body.is-preload .bannerInt > .titleInt {
     font-size: 2em;
     font-family: "sofiaBold", Helvetica, Arial, sans-serif;
     text-align: center;
+    color: #2E3649;
   }
   .contEm label {
     font-size: 1rem;
     font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
     text-align: center;
+    color: #2E3649;
   }
 
   .maskTerminos {
@@ -3518,7 +3515,7 @@ body.is-preload .bannerInt > .titleInt {
     box-shadow: 0px 1px 25px 4px #b0aeb0;
     height: 50vh !important;
     margin-left: 0% !important;
-    text-align: left;
+    text-aling: left;
   }
 
   .columnSection2 {
@@ -3540,7 +3537,7 @@ body.is-preload .bannerInt > .titleInt {
     font-size: 1.5em !important;
     letter-spacing: 2px;
     font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    font-weith: bold;
     white-space: pre-wrap;
     text-align: left !important;
   }
@@ -3549,7 +3546,7 @@ body.is-preload .bannerInt > .titleInt {
   }
 
   .listSociales {
-    margin: 0;
+    margin-left: -15%;
   }
 
   .bgsImgContact {
@@ -3644,7 +3641,7 @@ body.is-preload .bannerInt > .titleInt {
   }
 
   .listSociales {
-    margin: 0;
+    margin-left: -12% !important;
   }
 }
 /* ==|====================
@@ -3690,7 +3687,7 @@ body.is-preload .bannerInt > .titleInt {
 }
 
 .listFooter {
-  list-style: none; margin: 0 0 15px; padding: 0;
+  list-style: none;
 }
 .listFooter li label {
   color: #ffffff;
@@ -3704,15 +3701,14 @@ body.is-preload .bannerInt > .titleInt {
   color: #ffffff;
 }
 .listFooter li img.imgFooterLogo {
-  width: 15%;
+  width: 25%;
   margin-bottom: 3%;
 }
 
 .listSociales {
   list-style: none;
-  /* margin-left: -4%;
-  margin-top: 2%; */
-  margin: 15px 0; padding: 0; display: flex;
+  margin-left: -12%;
+  margin-top: 4%;
 }
 .listSociales li {
   float: left;
@@ -4007,7 +4003,8 @@ body.is-preload .bannerInt > .titleInt {
   }
 
   .listSociales {
-    margin: 0;
+    margin-left: -4%;
+    margin-top: 2%;
   }
 }
 /* Modules */

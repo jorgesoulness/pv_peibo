@@ -39,9 +39,9 @@
                   <!--<li>
                     <a href="/personal">personal</a>
                   </li>-->
-                  <li>
+                  <!--<li>
                     <a href="/empresas">empresas</a>
-                  </li>
+                  </li>-->
                 </ul>
             </div>
             <div class="col-sm-4 justify-content-end d-flex">
@@ -60,23 +60,19 @@
             </div>
           </div>
       </div>
-      <div class="container-fluid d-block d-sm-block d-md-none ">
-        <div class="row ">
-            <div class="col-sm-12">
-              <ul class="listHeaderMobile">
-                  <li class="">
-                    <a href="<?php site_url(''); ?>" class="">
-                      <img src="/wp-content/themes/peibo-child/assets/img/logos/logoHeader.png" width="50%" class="imgHeader" />
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <i class="fa fa-bars iconHambur"></i>
-                    </a>
-                  </li>
-                </ul>
-            </div>
+      <div class="container-fluid d-block d-sm-block d-md-none pt-4">
+        <div class="d-flex justify-content-around bd-highlight mb-3">
+          <div class="p-2 bd-highlight">
+            <a href="<?php site_url(''); ?>" class="">
+              <img src="/wp-content/themes/peibo-child/assets/img/logos/logoHeader.png" width="50%" class="imgHeader" />
+            </a>
           </div>
+          <div class="p-2 bd-highlight">
+           <a>
+              <i class="fa fa-bars iconHambur"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -90,12 +86,12 @@
             <!--<li>
               <a href="/personal">personal <i class="fa fa-chevron-right"></i></a>
             </li>-->
-            <li>
+            <!--<li>
               <a href="/empresas">empresas <i class="fa fa-chevron-right"></i></a>
             </li>
             <li>
               <hr class="menuMolbileHr" />
-            </li>
+            </li>-->
             <li>
               <a href="/personal#ContentContacto">contacto <i class="fa fa-chevron-right"></i></a>
             </li>

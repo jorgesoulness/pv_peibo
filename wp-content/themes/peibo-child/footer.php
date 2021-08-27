@@ -3,9 +3,9 @@
 
         <!-- footer -->
         <footer class="g-footer" data-blur-content>
-          <div class="container" style="z-index:4;position:relative;">
-            <div class="row justify-content-ccenter">
-              <div class="col-12 col-md-4">
+          <div class="col-sm-8" style="z-index:4;">
+            <div class="row">
+              <div class="col-sm-4">
                 <ul class="listFooter">
                   <li>
                     <img src="/wp-content/themes/peibo-child/assets/img/logos/LOGO.png" class="imgFooterLogo">
@@ -37,8 +37,8 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-12 col-md-4">
-                <ul class="listFooter">
+              <div class="col-sm-4">
+                  <ul class="listFooter mt-3">
                     <!--<li>
                       <a href="/personal">Personal</a>
                     </li>-->
@@ -50,7 +50,7 @@
                     </li>
                   </ul>
               </div>
-              <div class="col-12 col-md-4">
+              <div class="col-sm-4">
                 <ul class="listFooter">
                     <li>
                       <a href="/legales">Legales</a>

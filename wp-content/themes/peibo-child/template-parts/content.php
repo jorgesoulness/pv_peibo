@@ -24,6 +24,18 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-12">
+									<div class="breadCt">
+										<nav aria-label="breadcrumb">
+											<ol class="breadcrumb">
+										<?php if(function_exists('bcn_display'))
+    								{
+        							bcn_display();
+    								}?>
+											</ol>
+										</nav>
+									</div>
+								</div>
+								<div class="col-12">
 									<h1 class="blogSingle__title"><?php the_title(); ?></h1>
 									<span class="blogSingle__date"><?php the_time( 'F j, Y' ); ?></span>
 									<?php the_content(); ?>

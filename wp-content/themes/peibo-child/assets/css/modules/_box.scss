@@ -39,8 +39,21 @@
   }
   @media all and (min-width: 1366px) {
     &__topLeft {
-    @include transform(translate(-200px, -360px));
+    @include transform(translate(-220px, -315px));
     }
+  }
+}
+
+.alm-btn-wrap {
+  width: 100%; height: auto; padding: 0; margin: 60px 0 0; position: relative; @include box-sizing(border-box);
+}
+.ctAjax__btn {
+  display: block; width: 150px; height: 40px; border-radius: 20px; line-height: 35px; text-align: center; border: 2px solid #24238a; background-color: transparent; @include box-sizing(border-box); margin: 0 auto; padding: 0; position: relative; color: #24238a; font-size: rem(15px); cursor: pointer;
+  &:after {
+    content: '\f078'; font-family: 'fontAwesome'; margin-left: 8px;
+  }
+  &:disabled {
+    opacity: 0.35; cursor: none; pointer-events: none;
   }
 }
 
@@ -50,7 +63,16 @@
     position: relative;
   }
   &__title {
-    margin: 0 0 50px; padding: 0; font-family: sofiaBold; @include fluid-type(22px, 60px, 320px, 1200px); color: $col2;
+    margin: 0 0 30px; padding: 0; font-family: sofiaBold; @include fluid-type(22px, 60px, 320px, 1200px); color: $col2;
+    @media all and (min-width: 640px) {
+      margin: 0 0 50px;
+    }
+    @media all and (min-width: 768px) {
+      margin: 0 0 70px;
+    }
+    @media all and (min-width: 1200px) {
+      margin: 0 0 80px;
+    }
   }
   &__hr {
     border-top: 2px solid #8B90A3; margin-top: 50px; margin-bottom: 50px;
@@ -202,18 +224,19 @@
 }
 
 .secMask {
-  margin-top: -140px;
+  margin-top: -160px;
   @media all and (min-width: 576px) {
     margin-top: 0;
   }
 }
 .slideCt {
-  width: 100%; height: auto; padding: 400px 20px 0; margin: 0; position: relative; @include box-sizing(border-box); background-image: url('#{$imgR}curva2.png'), url('#{$imgR}curva2.png') !important; background-color: transparent; background-repeat: no-repeat; background-position: left; background-size: 80%; background-position-y: -10%; background-position-x: -190%;
+  width: 100%; height: auto; padding: 400px 20px 0; margin: 0; position: relative; @include box-sizing(border-box); background-image: url('#{$imgR}empresas/curvaEmpresas2.png'), url('#{$imgR}empresas/curvaEmpresas2.png') !important; background-color: transparent; background-repeat: no-repeat; background-position: left; background-size: 85%; background-position-y: -5%; background-position-x: -238%; z-index: 1;
   @media all and (min-width: 576px) {
     padding: 30px 0 100px;
   }
   @media all and (min-width: 768px) {
-    background-size: 31%; background-repeat: no-repeat; background-position: left; background-position-y: 100%; background-position-x: -10%; z-index: 2; padding: 50px 0 100px;
+    background-size: 26%; background-repeat: no-repeat; background-position: left; background-position-y: 100%; background-position-x: -10%; z-index: 2; padding: 50px 0 100px;
+    background-image: url('#{$imgR}curva2.png'), url('#{$imgR}curva2.png') !important;
   }
   @media all and (min-width: 992px) {
     padding: 80px 20px 100px;
@@ -225,6 +248,389 @@
     width: 100%; max-width: 1140px; height: auto; margin: 0 auto; padding: 40px 30px 20px; @include box-sizing(border-box); background: rgba(255, 255, 255, 0.8); border-radius: 25px; -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0; box-shadow: 0px 1px 25px 4px #b0aeb0; position: relative; overflow: hidden;
     @media all and (min-width: 768px) {
       background: rgba(255, 255, 255, 0.8); border-radius: 25px; -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0; box-shadow: 0px 1px 25px 4px #b0aeb0; text-align: left;
+    }
+  }
+}
+
+
+@media all and (min-width: 768px) {
+  .horasSub{
+    text-decoration: underline #5A58C4;
+    text-decoration-thickness: 5px;
+    border-bottom-width: 3.1px;
+   padding-bottom: 15px;
+   width: fit-content;
+   text-underline-offset: 45%;
+  }
+}
+
+.bgsSectionEmpresas{
+  h1{
+
+      @media all and (min-width: 768px) {
+          text-align: left;
+          margint-top: 15% !important;
+          font-size: 3.5em;
+          letter-spacing: 2px;
+      }
+
+  }
+
+  .noMargin{
+      @media all and (min-width: 768px) {
+        justify-content: start !important;
+      }
+      label{
+
+        @media all and (min-width: 768px) {
+            text-align: left;
+            font-size: 1.2em !important;
+            width: 95%;
+            margin-top: 7%;
+        }
+
+      }
+  }
+}
+
+.contCvv{
+  @media all and (min-width: 768px) {
+    margin-left: -8% !important;
+  }
+}
+
+.contEm h3 {
+  @media all and (min-width: 768px) {
+    font-size: 1.2em;
+  }    
+}
+
+
+.sectionTar {
+  background-color: #2E3649;
+  min-height: 50vh;
+  padding: 10px 3% 3%;
+  box-sizing: border-box;
+  text-align: center;
+  @media all and (min-width: 576px) {
+    text-align: left !important;
+    padding: 50px 3% 3%;
+  }
+}
+
+.titleCash {
+  color: white;
+  font-size: 2.6em;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 7% 0% !important;
+  font-family: "sofiaBold", Helvetica, Arial, sans-serif;
+
+  @media all and (min-width: 768px) {
+    font-size: 3.1em;
+  }    
+}
+
+
+.parCash {
+  color: white;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  font-size: 1em;
+  font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
+
+  @media all and (min-width: 768px) {
+    font-size: 1.2rem;
+  }   
+}
+
+
+
+.listTarEmpresas {
+  list-style: none;
+  color: #00DCDA;
+  padding: 0% !important;
+  font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin-top: 5%;
+
+  @media all and (min-width: 768px) {
+    font-size: 1.2em;
+    margin-top: 1%;
+  }  
+}
+
+
+.contPantalla2{
+  display: none !important;
+  @media all and (min-width: 768px) {
+    display: block !important;
+  }  
+}
+
+.contPantalla2Mobile{
+  padding: 0% !important;
+  display: block !important;
+  -webkit-box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.75);
+  @media all and (min-width: 768px) {
+    display: none !important;
+    box-shadow: inherit;
+  }  
+}
+
+
+.sectionStores {
+  background-color: #ffffff;
+  z-index: -2 !important;  
+  position: relative;
+  @media all and (min-width: 768px) {
+    position: inherit;
+    min-height: 50vh;
+    padding: 3%;
+    z-index: inherit;
+  }  
+}
+
+.contTarNomi{
+  display: none !important;
+  @media all and (min-width: 768px) {
+    display: block !important;
+  }  
+}
+
+.contTarNomiMobile{
+
+  .titleNomina {
+      color: #2E3649;
+      font-size: 2.3em;
+      letter-spacing: 1px !important;
+      font-weight: 100;
+      font-family: "sofiaBold", Helvetica, Arial, sans-serif;
+  }
+
+  .parNomina {
+    color: #2E3649;
+    font-weight: lighter;
+    font-size: 1.2em;
+    font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
+    letter-spacing: inherit;
+  }
+
+  .parNomina2 {
+    color: #2E3649;
+    font-weight: lighter;
+    font-size: 2.3em;
+    font-family: "sofiaBold", Helvetica, Arial, sans-serif;
+    letter-spacing: inherit;
+  }
+
+  .maskMobileNomina{
+    background-image: url('#{$imgR}empresas/curvaEmpresas3.png'), url('#{$imgR}empresas/curvaEmpresas3.png') !important;
+    width: 123%;
+    height: 100%;
+    padding: 0 0 0;
+    margin: 0;
+    margin-top: 0%;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position-y: 100%;
+    background-position-x: 124% !important;
+    z-index: 2 !important;
+  }
+
+  .contTarCred{
+    padding: 0%;
+    margin: 0%;
+    text-align: left;
+    margin-left: -20%;
+    img{
+      width: 150% !important;
+      margin: 0% !important;
+      padding: 0% !important;
+    }
+  }
+  display: block !important;
+  @media all and (min-width: 768px) {
+    display: none !important;
+  } 
+}
+
+
+.mask2.empresas {
+    margin-top: 0%;
+    z-index: -2;
+    background-color: transparent;
+    position: relative;
+    @media all and (min-width: 768px) {
+      margin-top: -2% !important;
+      z-index: 1;
+      background-color: transparent;
+    } 
+}
+
+
+.maskEmpresas {
+    background-image: url("#{$imgR}empresas/viaje.png"), url("#{$imgR}empresas/viaje.png") !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    background-size: 57%;
+    background-position-y: 97%;
+    width: 130%;
+    background-position-x: 100%;
+    z-index: 5 !important;
+    @media all and (min-width: 768px) {      
+      height: 124% !important;
+      background-size: 47% !important;
+      background-position-y: 0% !important;
+      width: 100%;
+      background-position-x: 133% !important;
+      z-index: 34 !important;
+      position: absolute;
+      margin-top: -7%;
+    } 
+}
+
+
+.sectionQueremos.empresas h3 {
+  font-family: "sofiaBold", Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  margin-top: 10% !important;
+  margin-left: 6%;
+  @media all and (min-width: 768px) { 
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-top: 0% !important;
+    margin-left: inherit;
+
+  }
+}
+
+
+.listEmpresas {
+  margin-left: -5% !important;
+  @media all and (min-width: 768px) { 
+    list-style: none;
+  }
+}
+
+
+.listEmpresas li {
+  
+  color: white;
+  font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
+  
+
+  @media all and (min-width: 768px) { 
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+}
+
+
+.mask2.empresas p {
+
+  font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 1em;
+  text-align: left;
+  margin-left: 8%;
+  margin-top: 0% !important;
+  width: 100%;
+
+
+  @media all and (min-width: 768px) { 
+    font-size: 1.3rem;
+    margin-top: inherit;
+    margin-left: inherit;
+  }
+}
+
+
+.mask2.empresas p.second {
+  width: 61% !important;
+  @media all and (min-width: 768px) { 
+    width: 100%;
+  }
+
+}
+
+#ContentContacto{
+  @media all and (min-width: 768px) { 
+    z-index: -2 !important;
+    position: relative;
+  }
+}
+
+
+.contentFrm h2 {
+    font-family: "sofiaBold", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+    color: #2E3649;
+    @media all and (min-width: 768px) { 
+      font-size: 2.6em;
+      margin-top: 3%;
+    }
+}
+
+form label {
+  @media all and (min-width: 768px) { 
+    font-size: 1em;
+    color: #2E3649;
+    margin-top: 5%;
+    }
+}
+
+
+form {
+  margin-top: 0% !important;
+  @media all and (min-width: 768px) { 
+      margin-top: 3rem !important;
+    }
+}
+
+.contentFrm label {
+    font-family: "sofiaRegular", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+     @media all and (min-width: 768px) { 
+        font-size: 1em;
+     }
+}
+
+.customRowForm{
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  @media all and (min-width: 768px) { 
+    text-align: left !important;
+  }
+}
+
+.breadCt {
+  width: 100%; height: auto; padding: 0; margin: 0 0 30px;
+  & .breadcrumb {
+    margin: 0; padding: 0; background-color: transparent;
+    & li {
+      margin: 0; font-size: rem(13px);
+      &:before {
+        display: inherit; margin: 0; top: 0; left: inherit; width: inherit; background-color: transparent; border-radius: 0; height: inherit; position: inherit; float: left; padding-right: .5rem; color: #6c757d; content: "/";
+      }
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
     }
   }
 }
