@@ -1,5 +1,8 @@
 // ===== BOX
 
+.posRela {
+  position: relative;
+}
 .curve {
   @include position(absolute, 0 null null null); padding: 0; margin: 0; z-index: 1000; background-position: center center; background-repeat: no-repeat; background-size: cover; width: 200px; height: 280px; background-image: url('#{$imgR}curva2.png');
   &__topLeft {
@@ -223,14 +226,60 @@
   }
 }
 
+.ctModal {
+  width: 100%; height: 230px; padding: 0 30px; margin: 0; @include box-sizing(border-box); @include position(absolute, 50% null null 0); @include transform(translateY(-50%)); @include displayFlex(flex, column, center, center, wrap); background-color: $bgsinputs;
+  &__icon {
+    width: 100%; height: auto; padding: 0; margin: 0 0 15px; position: relative; text-align: center;
+    & i {
+      color: $aqua; @include fluid-type(20px, 65px, 320px, 1200px);
+    }
+    @media all and (min-width: 768px) {
+      margin: 0 0 25px;
+    }
+    @media all and (min-width: 1024px) {
+      margin: 0 0 40px;
+    }
+  }
+  &__desc {
+    width: 100%; height: auto; padding: 0; margin: 0; position: relative;
+    & p {
+      font-family: "sofiaRegular", Helvetica, Arial, sans-serif; margin: 0; padding: 0; color: $col2; text-align: center; @include fluid-type(13px, 16px, 320px, 1200px);
+    }
+  }
+  &__title {
+    margin: 0 0 10px; padding: 0; text-align: center; font-family: "sofiaBold", Helvetica, Arial, sans-serif; color: $aqua; @include fluid-type(16px, 22px, 320px, 1200px);
+    @media all and (min-width: 768px) {
+      margin: 0 0 15px;
+    }
+  }
+  @media all and (min-width: 640px) {
+    height: 250px; 
+  }
+  @media all and (min-width: 768px) {
+    height: 280px; 
+  }
+  @media all and (min-width: 992px) {
+    height: 300px; 
+  }
+  @media all and (min-width: 1024px) {
+    height: 350px; 
+  }
+  &.hideMo {
+    visibility: hidden; opacity: 0; z-index: -2; @include transition(opacity 300ms ease-in-out, visibility 0s, z-index 0s);
+  }
+  &.showMo {
+    visibility: visible; opacity: 1.0; z-index: 2; @include transition(opacity 300ms ease-in-out, visibility 0s, z-index 0s);
+  }
+}
+
 .secMask {
-  margin-top: -160px;
+  margin-top: -38px;
   @media all and (min-width: 576px) {
     margin-top: 0;
   }
 }
 .slideCt {
-  width: 100%; height: auto; padding: 400px 20px 0; margin: 0; position: relative; @include box-sizing(border-box); background-image: url('#{$imgR}empresas/curvaEmpresas2.png'), url('#{$imgR}empresas/curvaEmpresas2.png') !important; background-color: transparent; background-repeat: no-repeat; background-position: left; background-size: 85%; background-position-y: -5%; background-position-x: -238%; z-index: 1;
+  width: 100%; height: auto; padding: 315px 20px 0; margin: 0; position: relative; @include box-sizing(border-box); background-image: url('#{$imgR}empresas/curvaEmpresas2.png'), url('#{$imgR}empresas/curvaEmpresas2.png') !important; background-color: transparent; background-repeat: no-repeat; background-position: left; background-size: 85%; background-position-y: -5%; background-position-x: -238%; z-index: 1;
   @media all and (min-width: 576px) {
     padding: 30px 0 100px;
   }
@@ -245,7 +294,7 @@
     padding: 100px 0 100px;
   }
   &__bgTrans {
-    width: 100%; max-width: 1140px; height: auto; margin: 0 auto; padding: 40px 30px 20px; @include box-sizing(border-box); background: rgba(255, 255, 255, 0.8); border-radius: 25px; -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0; box-shadow: 0px 1px 25px 4px #b0aeb0; position: relative; overflow: hidden;
+    width: 100%; max-width: 1140px; height: auto; margin: 0 auto; padding: 40px 30px 20px; @include box-sizing(border-box); background: rgba(255, 255, 255, 1.0); border-radius: 25px; -webkit-box-shadow: none; box-shadow: none; position: relative; overflow: hidden;
     @media all and (min-width: 768px) {
       background: rgba(255, 255, 255, 0.8); border-radius: 25px; -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0; box-shadow: 0px 1px 25px 4px #b0aeb0; text-align: left;
     }
@@ -309,7 +358,7 @@
 .sectionTar {
   background-color: #2E3649;
   min-height: 50vh;
-  padding: 10px 3% 3%;
+  padding: 30px 3% 3%;
   box-sizing: border-box;
   text-align: center;
   @media all and (min-width: 576px) {
@@ -567,7 +616,7 @@
 
 #ContentContacto{
   @media all and (min-width: 768px) { 
-    z-index: -2 !important;
+    // z-index: -2 !important;
     position: relative;
   }
 }

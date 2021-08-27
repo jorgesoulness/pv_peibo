@@ -41,4 +41,58 @@ $(function(){
       // instead of a settings object
     ]
   });
+
+  // Formulario Contacto
+  var $urlSitio = siteURL;
+  $("#frmContact").validate({
+    errorElement: "div",
+    errorClass: "error-line",
+    rules: {
+      inpNombre: "required",
+      inpApellidos: "required",
+      inpEmail: {
+        required: true,
+        email: true
+      },
+      inpMensaje: "required",
+      // acceptFrm: "required",
+    },
+    messages: {
+      inpNombre: "<i class='fa fa-exclamation-triangle'><i>",
+      inpApellidos: "<i class='fa fa-exclamation-triangle'><i>",
+      inpEmail: {
+        required: "<i class='fa fa-exclamation-triangle'><i>",
+        email: "<i class='fa fa-exclamation-triangle'><i>"
+      },
+      inpMensaje: "<i class='fa fa-exclamation-triangle'><i>",
+      // acceptFrm: "<i class='fa fa-exclamation-triangle'><i>",
+    },
+    submitHandler: function(form) {
+      var dataForm = $('#frmContact').serialize();
+      $.ajax({
+        url: $urlSitio + 'contactoScript.php',
+        type: 'POST',
+        data: dataForm,
+        beforeSend: function(xhr) {
+          $('.btnSend').addClass('loadBtn');
+        },
+        complete: function(xhr, textstatus) {
+          $('.btnSend').removeClass('loadBtn');
+        },
+        success: function(data) {
+          console.log(data);
+          $("#frmContact").each (function(){
+            this.reset();
+          });
+          $('#modalCongrats').removeClass('hideMo').addClass('showMo');
+          setTimeout(function(){
+            $('#modalCongrats').removeClass('showMo').addClass('hideMo');
+          }, 5000);
+        },
+        error: function(e) {
+          console.log(e);
+        }
+      });
+    }
+  });
 });

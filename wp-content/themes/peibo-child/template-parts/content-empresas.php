@@ -334,9 +334,9 @@ get_header();
       <img src="/wp-content/themes/peibo-child/assets/img/empresas/contactoempresa.png" />
     </div>
     <div class="col-sm-6 contentFrm justify-content-center d-flex">
-       <div class="col-sm-12 justify-content-center d-flex pt-2">
+       <div class="col-sm-12 justify-content-center d-flex pt-2" style="position:relative;">
             
-        <form class="pt-5">
+        <form id="frmContact" method="POST" name="frmContact" class="pt-5" style="position:relative;">
            <div class="form-row customRowForm">
                 <h2>Contacto</h2>
            </div>
@@ -345,27 +345,36 @@ get_header();
                 Completa el siguiente formulario para contactar con nuestro equipo.</label>
            </div>
           <div class="form-row mt-4">
-            <div class="form-group col-md-6 ">
+            <div class="form-group col-md-6 posRela">
                <label for="inputEmail4">Nombre (s)*</label>
                <input type="text" class="form-control required" required id="inpNombre" name="inpNombre">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 posRela">
               <label for="inputPassword4">Apellidos*</label>
               <input type="text" class="form-control required" required id="inpApellidos" name="inpApellidos">
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group posRela">
             <label for="inputAddress">Email</label>
             <input type="email" class="form-control required" required id="inpEmail" name="inpEmail">
           </div>
-          <div class="form-group">
+          <div class="form-group posRela">
             <label for="inputAddress2">Mensaje*</label>
             <textarea id="inpMensaje" name="inpMensaje" class="form-control required" required></textarea>
           </div>
           <div class="form-group text-center d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary btnSubmit">Enviar  <i class="fa fa-paper-plane"></i></button>
+            <button type="submit" class="btn btn-primary btnSubmit btnSend">Enviar  <i class="fa fa-paper-plane"></i></button>
           </div>
-        </form>
+          <div class="ctModal hideMo" id="modalCongrats">
+            <div class="ctModal__icon">
+              <i class="fa fa-paper-plane"></i>
+            </div><!-- end.ctModal__icon -->
+            <div class="ctModal__desc">
+              <h4 class="ctModal__title">¡Gracias por ponerte en contacto con nosotros!</h4>
+              <p>En breve recibirás un correo de nuestros asesores.</p>
+            </div>
+          </div><!-- end.ctModal -->
+        </form><!-- end.form -->
       </div>
     </div> 
   </div>
