@@ -70,7 +70,7 @@ $(function(){
     submitHandler: function(form) {
       var dataForm = $('#frmContact').serialize();
       $.ajax({
-        url: $urlSitio + 'contactoScript.php',
+        url: $urlSitio + 'contactscript.php',
         type: 'POST',
         data: dataForm,
         beforeSend: function(xhr) {
