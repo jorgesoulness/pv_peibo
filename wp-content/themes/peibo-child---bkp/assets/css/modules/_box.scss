@@ -1,0 +1,199 @@
+// ===== BOX
+
+.curve {
+  @include position(absolute, 0 null null null); padding: 0; margin: 0; z-index: 1000; background-position: center center; background-repeat: no-repeat; background-size: cover; width: 200px; height: 280px; background-image: url('#{$imgR}curva2.png');
+  &__topLeft {
+    left: 0; @include transform(translate(-80px, -360px));
+  }
+  &__topRight {
+    right: 0; @include transform(translate(120px, -320px));
+  }
+  @media all and (min-width: 640px) {
+    width: 250px; height: 350px;
+    &__topLeft {
+    @include transform(translate(-140px, -316px));
+    }
+    &__topRight {
+      @include transform(translate(100px, -335px));
+    }
+  }
+  @media all and (min-width: 768px) {
+    &__topRight {
+      @include transform(translate(95px, -250px));
+    }
+  }
+  @media all and (min-width: 992px) {
+    width: 300px; height: 420px;
+    &__topLeft {
+    @include transform(translate(-190px, -345px));
+    }
+    &__topRight {
+      @include transform(translate(120px, -320px));
+    }
+  }
+  @media all and (min-width: 1200px) {
+    width: 350px; height: 490px;
+    &__topLeft {
+    @include transform(translate(-200px, -395px));
+    }
+  }
+  @media all and (min-width: 1366px) {
+    &__topLeft {
+    @include transform(translate(-200px, -360px));
+    }
+  }
+}
+
+.blogSec {
+  width: 100%; height: auto; padding: 0; margin: 150px 0 80px; @include box-sizing(border-box); position: relative;
+  &__main {
+    position: relative;
+  }
+  &__title {
+    margin: 0 0 50px; padding: 0; font-family: sofiaBold; @include fluid-type(22px, 60px, 320px, 1200px); color: $col2;
+  }
+  &__hr {
+    border-top: 2px solid #8B90A3; margin-top: 50px; margin-bottom: 50px;
+  }
+}
+.blogSingle {
+  width: 100%; height: auto; padding: 0; margin: 120px 0 0; @include box-sizing(border-box); position: relative;
+  &__cover {
+    position: relative; width: 100%; max-width: 1400px; height: 220px; margin: 0 auto; padding: 0; overflow: hidden; @include box-sizing(border-box); z-index: 2;
+    & img {
+      display: block; width: 100%; height: 100%; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover"; position: relative; @include transform(scale(1.0)); @include transition(transform 900ms ease-in-out);
+    }
+    @media all and (min-width: 768px) {
+      height: 320px;
+    }
+  }
+  &__title {
+    @include fluid-type(20px, 55px, 320px, 1200px); font-family: sofiaBold; margin: 0 0 20px; padding: 0; line-height: 1; color: $col2;
+  }
+  &__date {
+    margin: 0 0 20px; padding: 0; @include fluid-type(12px, 14px, 320px, 1200px); line-height: 1; color: $col2; display: block;
+  }
+  &__descSingle {
+    position: relative; width: 100%; margin: 0; padding: 30px 0 40px; overflow: hidden; z-index: 1;
+    & p {
+      margin: 0 0 16px; padding: 0; color: $col2; line-height: 1.2; font-family: sofiaRegular; @include fluid-type(13px, 16px, 320px, 1200px);
+    }
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+      color: $col2; line-height: 1.2; font-family: sofiaBold;
+    }
+    & ul, & ol {
+      list-style-type: none; padding: 0 0 0 24px; margin: 0 0 20px; @include box-sizing(border-box);
+      & li {
+        list-style-type: none; position: relative; margin: 0 0 3px; line-height: 1.2; color: $col2; font-family: sofiaRegular; @include fluid-type(13px, 16px, 320px, 1200px);
+        &:before {
+          content: ''; @include position(absolute, 8px null null -15px); width: 6px; height: 6px; background-color: $aqua; border-radius: 50%;
+        }
+      }
+    }
+    & a {
+      text-decoration: underline;
+    }
+    & strong, & b {
+      font-family: $sofiaBold;
+    }
+    img.alignright {float:right; margin:0 0 1em 1em;max-width:100%;height:auto;}
+    img.alignleft {float:left; margin:0 1em 1em 0;max-width:100%;height:auto;}
+    img.aligncenter {display: block; margin-left: auto; margin-right: auto;margin-bottom:rem(16px);max-width:100%;height:auto;}
+    a img.alignright {float:right; margin:0 0 1em 1em;max-width:100%;height:auto;}
+    a img.alignleft {float:left; margin:0 1em 1em 0;max-width:100%;height:auto;}
+    a img.aligncenter {display: block; margin-left: auto; margin-right: auto;max-width:100%;height:auto;}
+    &:before, &:after {
+      content: ''; @include position(absolute, null null null null); padding: 0; margin: 0; z-index: 2; background-position: center center; background-repeat: no-repeat; background-size: cover;
+    }
+    &:before {
+      top: 50%; left: 0; @include transform(translate(-80%, -50%)); width: 600px; height: 600px; background-image: url('#{$imgR}curva6.png');
+    }
+    &:after {
+      top: -255px; right: 20px; @include transform(translate(0, 0)); width: 400px; height: 400px; background-image: url('#{$imgR}curva5.png');
+    }
+    @media all and (min-width: 768px) {
+      padding: 60px 0 80px;
+    }
+    @media all and (min-width: 1200px) {
+      &:before {
+        @include transform(translate(-60%, -50%));
+      }
+    }
+  }
+}
+
+.mainBoxBlog {
+  width: 100%; height: auto; padding: 0; margin: 0; position: relative; @include displayFlex(flex, row, center, flex-start, wrap);
+  &__image {
+    width: 100%; height: 200px; @include box-sizing(border-box); padding: 0; margin: 0 0 5px; position: relative; overflow: hidden;
+    & img {
+      display: block; width: 100%; height: 100%; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover"; position: relative; @include transform(scale(1.0)); @include transition(transform 900ms ease-in-out);
+    }
+    @media all and (min-width: 640px) {
+      width: 50%; height: 250px;
+    }
+    @media all and (min-width: 768px) {
+      height: 300px;
+    }
+  }
+  &__desc {
+    width: 100%; height: auto; @include box-sizing(border-box); padding: 0 20px; margin: 0; color: $col2;
+    & h4 {
+      @include fluid-type(18px, 50px, 320px, 1200px); font-family: sofiaBold; margin: 0; padding: 0; line-height: 1;
+    }
+    & .rte {
+      width: 100%; height: auto; padding: 0; margin: 0 0 10px; text-align: left;
+      & p {
+        margin: 0; padding: 0; @include fluid-type(13px, 18px, 320px, 1200px); line-height: 1.2;
+      }
+    }
+    @media all and (min-width: 640px) {
+      width: 50%;
+    }
+  }
+  &__date {
+    margin: 0 0 5px; padding: 0; @include fluid-type(12px, 15px, 320px, 1200px); line-height: 1;
+  }
+  &__link {
+    display: block; text-align: left; margin: 0; padding: 0; color: $aqua; text-decoration: none; @include fluid-type(14px, 18px, 320px, 1200px); @include transition(all 300ms ease);
+    &:hover {
+      color: $col2;
+    }
+  }
+  &__divider {
+    border-top: 2px solid $aqua; margin-top: rem(16px); margin-bottom: rem(16px); box-sizing: content-box; height: 0; overflow: visible; displya: block;
+  }
+}
+.boxBlog {
+  width: 100%; height: auto; padding: 0; margin: 0 0 15px; position: relative; @include displayFlex(flex, column, flex-start, flex-start, wrap);
+  &__image {
+    width: 100%; height: 190px; @include box-sizing(border-box); padding: 0; margin: 0 0 5px; position: relative; overflow: hidden;
+    & img {
+      display: block; width: 100%; height: 100%; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover"; position: relative; @include transform(scale(1.0)); @include transition(transform 900ms ease-in-out);
+    }
+    @media all and (min-width: 640px) {
+      height: 230px;
+    }
+  }
+  &__desc {
+    width: 100%; height: auto; @include box-sizing(border-box); padding: 0 20px; margin: 0; color: $col2;
+    & h4 {
+      @include fluid-type(16px, 26px, 320px, 1200px); font-family: sofiaBold; margin: 0 0 10px; padding: 0; line-height: 1;
+    }
+    & .rte {
+      width: 100%; height: auto; padding: 0; margin: 0 0 10px; text-align: left;
+      & p {
+        margin: 0; padding: 0; @include fluid-type(13px, 16px, 320px, 1200px); line-height: 1.2;
+      }
+    }
+  }
+  &__date {
+    margin: 0; padding: 0; @include fluid-type(12px, 15px, 320px, 1200px); line-height: 1;
+  }
+  &__link {
+    display: block; text-align: left; margin: 0; padding: 0; color: $aqua; text-decoration: none; @include fluid-type(14px, 17px, 320px, 1200px); @include transition(all 300ms ease);
+    &:hover {
+      color: $col2;
+    }
+  }
+}

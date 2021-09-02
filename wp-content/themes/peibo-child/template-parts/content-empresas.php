@@ -97,7 +97,7 @@ get_header();
       </div><!-- end.itemSlider -->
     </div>
   </div><!-- end.slideCt__bgTrans -->
-</section><!-- end.slideCt --> 
+</section><!-- end.slideCt -->
 
 <section class="container-fluid d-flex justify-content-center preSection animate__animated animate__bounce animate__delay-3s animate__bounceInUp" style="display: none!important;">
   <div class="row mt-2 mb-2 container section2">
@@ -336,45 +336,9 @@ get_header();
     <div class="col-sm-6 contentFrm justify-content-center d-flex">
        <div class="col-sm-12 justify-content-center d-flex pt-2" style="position:relative;">
             
-        <form id="frmContact" method="POST" name="frmContact" class="pt-5" style="position:relative;">
-           <div class="form-row customRowForm">
-                <h2>Contacto</h2>
-           </div>
-           <div class="form-row customRowForm">
-                <label>¿Tienes alguna duda o comentario para nosotros?<br/>
-                Completa el siguiente formulario para contactar con nuestro equipo.</label>
-           </div>
-          <div class="form-row mt-4">
-            <div class="form-group col-md-6 posRela">
-               <label for="inputEmail4">Nombre (s)*</label>
-               <input type="text" class="form-control required" required id="inpNombre" name="inpNombre">
-            </div>
-            <div class="form-group col-md-6 posRela">
-              <label for="inputPassword4">Apellidos*</label>
-              <input type="text" class="form-control required" required id="inpApellidos" name="inpApellidos">
-            </div>
-          </div>
-          <div class="form-group posRela">
-            <label for="inputAddress">Email</label>
-            <input type="email" class="form-control required" required id="inpEmail" name="inpEmail">
-          </div>
-          <div class="form-group posRela">
-            <label for="inputAddress2">Mensaje*</label>
-            <textarea id="inpMensaje" name="inpMensaje" class="form-control required" required></textarea>
-          </div>
-          <div class="form-group text-center d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary btnSubmit btnSend">Enviar  <i class="fa fa-paper-plane"></i></button>
-          </div>
-          <div class="ctModal hideMo" id="modalCongrats">
-            <div class="ctModal__icon">
-              <i class="fa fa-paper-plane"></i>
-            </div><!-- end.ctModal__icon -->
-            <div class="ctModal__desc">
-              <h4 class="ctModal__title">¡Gracias por ponerte en contacto con nosotros!</h4>
-              <p>En breve recibirás un correo de nuestros asesores.</p>
-            </div>
-          </div><!-- end.ctModal -->
-        </form><!-- end.form -->
+        <div class="pt-5" style="position:relative;">
+          <?php echo do_shortcode('[contact-form-7 id="104" title="Formulario Contacto"]'); ?>
+        </div><!-- end.form -->
       </div>
     </div> 
   </div>

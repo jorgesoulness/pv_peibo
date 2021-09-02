@@ -300,6 +300,28 @@
     }
   }
 }
+.slideCtPer {
+  width: 100%; height: auto; padding: 315px 20px 0; margin: 0; position: relative; @include box-sizing(border-box); background-image: url('#{$imgR}empresas/curvaEmpresas2.png'), url('#{$imgR}empresas/curvaEmpresas2.png') !important; background-color: transparent; background-repeat: no-repeat; background-position: left; background-size: 85%; background-position-y: -5%; background-position-x: -238%; z-index: 1;
+  @media all and (min-width: 576px) {
+    padding: 30px 0 100px;
+  }
+  @media all and (min-width: 768px) {
+    background-size: 26%; background-repeat: no-repeat; background-position: left; background-position-y: 25%; background-position-x: -10%; z-index: 2; padding: 50px 0 100px;
+    background-image: url('#{$imgR}curva2.png'), url('#{$imgR}curva2.png') !important;
+  }
+  @media all and (min-width: 992px) {
+    padding: 80px 20px 100px;
+  }
+  @media all and (min-width: 1200px) {
+    padding: 100px 0 100px;
+  }
+  &__bgTrans {
+    width: 100%; max-width: 1140px; height: auto; margin: 0 auto; padding: 40px 30px 20px; @include box-sizing(border-box); background: rgba(255, 255, 255, 1.0); border-radius: 25px; -webkit-box-shadow: none; box-shadow: none; position: relative; overflow: hidden;
+    @media all and (min-width: 768px) {
+      background: rgba(255, 255, 255, 0.8); border-radius: 25px; -webkit-box-shadow: 0px 1px 25px 4px #b0aeb0; box-shadow: 0px 1px 25px 4px #b0aeb0; text-align: left;
+    }
+  }
+}
 
 
 @media all and (min-width: 768px) {
@@ -642,10 +664,10 @@ form label {
 
 
 form {
-  margin-top: 0% !important;
+  margin: 0% !important;
   @media all and (min-width: 768px) { 
-      margin-top: 3rem !important;
-    }
+    // margin-top: 3rem !important;
+  }
 }
 
 .contentFrm label {
@@ -680,6 +702,167 @@ form {
           display: none;
         }
       }
+    }
+  }
+}
+
+.boxPerSlide {
+  padding-bottom: 0;
+  & .iconSection  {
+    width: 100%; max-width: 90px; height: auto; display: block; margin: 0 auto; padding: 0;
+  }
+}
+.bgWahite {
+  background-color: $white;
+}
+.secMaskTwo {
+  position: relative;
+  & h4 {
+    @include fluid-type(18px, 40px, 320px, 1024px); letter-spacing: 0;
+  }
+  & .mask2 {
+    top: 350px;
+  }
+  @media all and (min-width: 768px) {
+    & h4 {
+      letter-spacing: 1px;
+    }
+    & .mask2 {
+      top: inherit;
+    }
+  }
+  @media all and (min-width: 1024px) {
+    & h4 {
+      letter-spacing: 2px;
+    }
+  }
+  & .titleQuienes {
+    @include fluid-type(25px, 80px, 320px, 1024px); letter-spacing: 0;
+    @media all and (min-width: 768px) {
+      letter-spacing: 1px;
+    }
+    @media all and (min-width: 1024px) {
+      letter-spacing: 2px;
+    }
+  }
+  & .boxDesc {
+    margin-top: 30px;
+  }
+  & .sectionQueremos {
+    padding: 30px 0; width: 100%; margin-left: 0; z-index: 2; position: relative;
+    & h3 {
+      letter-spacing: 0; @include fluid-type(18px, 26px, 320px, 1200px); margin-bottom: 20px;
+    }
+  }
+  & .sectionEresEmp {
+    & h2 {
+      letter-spacing: 0; @include fluid-type(18px, 60px, 320px, 1200px); margin-bottom: 20px; text-align: center;
+    }
+  }
+  & p {
+    @include fluid-type(14px, 18px, 320px, 1200px); letter-spacing: 0; text-align: inherit;
+  }
+  @media all and (min-width: 768px) {
+    & .sectionQueremos {
+      padding: 30px 0 30px 100px; z-index: inherit;
+    }
+  }
+  @media all and (min-width: 1024px) {
+    & .sectionQueremos {
+      width: 85%; margin-left: 15%; padding: 30px 0;
+    }
+  }
+  @media all and (min-width: 1200px) {
+    & .sectionQueremos {
+      width: 80%; margin-left: 20%;
+    }
+  }
+}
+.frmPersonal {
+  & h2 {
+    text-align: left;
+  }
+  & label {
+    text-align: left; @include fluid-type(13px, 15px, 320px, 1200px);
+  }
+}
+
+.cvvCt {
+  width: 100%; height: auto; padding: 60px 0; margin: 0; position: relative; background-color: $col2; @include box-sizing(border-box);
+  &__img {
+    width: 100%; height: auto; @include box-sizing(border-box); padding: 0; margin: 0;
+    & img {
+      display: block; margin: 0 auto; padding: 0; border: 0; width: 100%; max-width: 250px; height: auto;
+    }
+    @media all and (min-width: 768px) {
+      & img {
+        max-width: 500px;
+      }
+    }
+  }
+  &__box {
+    width: 100%; height: auto; padding: 0; margin: 0; @include box-sizing(border-box); @include display(flex); @include flex-wrap(wrap);
+  }
+  &__item {
+    @include box-sizing(border-box); margin: 0; padding: 0;
+    & .cvvAni {
+      width: 100%; height: auto; padding: 0; margin: 0 0 20px; @include display(flex); @include flex-direction(row); @include flex-wrap(wrap); @include align-items(center); @include justify-content(center); @include box-sizing(border-box);
+      & h2 {
+        color: $azulitoBajito; margin: 0; padding: 0; @include fluid-type(40px, 80px, 320px, 1200px);
+      }
+      & small {
+        color: $azulitoBajito; margin: 0 20px 0 0; padding: 0; font-size: rem(14px); font-family: "sofiaBold", Helvetica, Arial, sans-serif;
+      }
+      @media all and (min-width: 768px) {
+        @include justify-content(flex-start); margin: 0;
+        & small {
+          margin: 0 40px 0 0;
+        }
+      }
+    }
+    &:nth-child(1) {
+      @include flex(0 0 100%); max-width: 100%;
+    }
+    &:nth-child(2) {
+      @include flex(0 0 100%); max-width: 100%;
+      & h3 {
+        color: $white; margin: 0 0 15px;
+      }
+      & p {
+        color: $white; margin: 0; padding: 0;
+      }
+    }
+    @media all and (min-width: 768px) {
+      &:nth-child(1) {
+        @include flex(0 0 40%); max-width: 40%;
+      }
+    &:nth-child(2) {
+      @include flex(0 0 60%); max-width: 60%;
+        & h3 {
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+}
+.downloadApp {
+  width: 100%; height: auto; padding: 35px 0; margin: 0; @include box-sizing(border-box); position: relative;
+  @media all and (min-width: 768px) {
+
+  }
+}
+.formGeneral {
+  & .wpcf7 {
+    & .ajax-loader {
+      @include position(absolute, null null 10px 50%); @include transform(translateX(-50%)); z-index: 4; margin: 0;
+    }
+  }
+  & form {
+    & label {
+      margin-top: 10px;
+    }
+    & textarea {
+      height: 90px;
     }
   }
 }

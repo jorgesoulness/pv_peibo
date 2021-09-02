@@ -139,3 +139,20 @@ function incrementor() {
 //   return $divSuper;
 // }
 // add_shortcode( 'superIndice', 'super_indice_shortcode' );
+
+add_action( 'wp_footer', 'mycustom_wp_footer' );
+function mycustom_wp_footer() {
+?>
+  <script type="text/javascript">
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+      if ( '105' == event.detail.contactFormId || '106' == event.detail.contactFormId ) {
+        //  jQuery('#myModal2').modal('show');
+         $('#modalCongrats').removeClass('hideMo').addClass('showMo');
+          setTimeout(function(){
+            $('#modalCongrats').removeClass('showMo').addClass('hideMo');
+          }, 5000);
+      }
+    }, false );
+  </script>
+<?php 
+}

@@ -36,9 +36,34 @@ $(function(){
           dots: true,
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
+    ]
+  });
+  $('.sliderCards--per').slick({
+    dots: false,
+    infinite: false,
+    autoplay: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    adaptiveHeight: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        }
+      }
     ]
   });
 
@@ -67,32 +92,32 @@ $(function(){
       inpMensaje: "<i class='fa fa-exclamation-triangle'><i>",
       // acceptFrm: "<i class='fa fa-exclamation-triangle'><i>",
     },
-    submitHandler: function(form) {
-      var dataForm = $('#frmContact').serialize();
-      $.ajax({
-        url: $urlSitio + 'contactscript.php',
-        type: 'POST',
-        data: dataForm,
-        beforeSend: function(xhr) {
-          $('.btnSend').addClass('loadBtn');
-        },
-        complete: function(xhr, textstatus) {
-          $('.btnSend').removeClass('loadBtn');
-        },
-        success: function(data) {
-          console.log(data);
-          $("#frmContact").each (function(){
-            this.reset();
-          });
-          $('#modalCongrats').removeClass('hideMo').addClass('showMo');
-          setTimeout(function(){
-            $('#modalCongrats').removeClass('showMo').addClass('hideMo');
-          }, 5000);
-        },
-        error: function(e) {
-          console.log(e);
-        }
-      });
-    }
+    // submitHandler: function(form) {
+    //   var dataForm = $('#frmContact').serialize();
+    //   $.ajax({
+    //     url: $urlSitio + 'contactscript.php',
+    //     type: 'POST',
+    //     data: dataForm,
+    //     beforeSend: function(xhr) {
+    //       $('.btnSend').addClass('loadBtn');
+    //     },
+    //     complete: function(xhr, textstatus) {
+    //       $('.btnSend').removeClass('loadBtn');
+    //     },
+    //     success: function(data) {
+    //       console.log(data);
+    //       $("#frmContact").each (function(){
+    //         this.reset();
+    //       });
+    //       $('#modalCongrats').removeClass('hideMo').addClass('showMo');
+    //       setTimeout(function(){
+    //         $('#modalCongrats').removeClass('showMo').addClass('hideMo');
+    //       }, 5000);
+    //     },
+    //     error: function(e) {
+    //       console.log(e);
+    //     }
+    //   });
+    // }
   });
 });

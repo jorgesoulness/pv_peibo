@@ -83,6 +83,9 @@ $table_prefix = 'pbdev_';
  */
 define( 'WP_DEBUG', false );
 
+/* Desactiva validación Conact form 7 */
+define( 'WPCF7_VALIDATE_CONFIGURATION', false );
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
