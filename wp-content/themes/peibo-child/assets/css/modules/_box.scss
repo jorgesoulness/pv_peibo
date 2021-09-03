@@ -1,5 +1,7 @@
 // ===== BOX
-
+.wow {
+  visibility: hidden; @include transform-origin(0 50%);
+}
 .posRela {
   position: relative;
 }
@@ -720,15 +722,15 @@ form {
   & h4 {
     @include fluid-type(18px, 40px, 320px, 1024px); letter-spacing: 0;
   }
-  & .mask2 {
-    top: 350px;
+  & img.mask2 {
+    top: 350px; height: 20%;
   }
   @media all and (min-width: 768px) {
     & h4 {
       letter-spacing: 1px;
     }
-    & .mask2 {
-      top: inherit;
+    & img.mask2 {
+      top: inherit; height: 80%; z-index: 2;
     }
   }
   @media all and (min-width: 1024px) {

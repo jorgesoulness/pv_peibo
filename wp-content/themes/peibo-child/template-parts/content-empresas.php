@@ -44,19 +44,19 @@ get_header();
       </div>
       <div class="col-sm-6 justify-content-center ">
         <div class="bgsSectionEmpresasMobile"></div>
-        <img class="celular animate__animated animate__bounce animate__delay-1s animate__fadeInRightBig" src="/wp-content/themes/peibo-child/assets/img/empresas/empresasv2.png" alt="Peibo" />
+        <img class="celular wow fadeIn" data-wow-duration="1s" data-wow-delay="1s" src="/wp-content/themes/peibo-child/assets/img/empresas/empresasv2.png" alt="Peibo" />
       </div>
     </div>
   </section>
 </div>
 
-<section class="slideCt mt-5 animate__animated animate__bounce animate__delay-3s animate__bounceInUp">
-  <div class="slideCt__bgTrans">
+<section class="slideCt mt-5">
+  <div class="slideCt__bgTrans wow bounceInUp" data-wow-duration="1s" data-wow-delay="1s">
     <div class="sliderCards">
       <div>
         <div class="columnSection2 empresas">
           <div class="col-sm-12 d-flex justify-content-center d-flex contentICon">
-            <img class="iconSection animate__animated animate__bounce animate__delay-4s animate__p" src="/wp-content/themes/peibo-child/assets/img/icons/cash.png" alt="Peibo" />
+            <img class="iconSection" src="/wp-content/themes/peibo-child/assets/img/icons/cash.png" alt="Peibo" />
           </div>
           <div class="col-sm-12 d-flex justify-content-center  text-center">
             <div class="row col-sm-12 d-flex justify-content-center contEm">
@@ -179,7 +179,7 @@ get_header();
         </div>
       </div>
       <div class="col-sm-6 d-flex justify-content-center texy-center contPantalla2" >
-        <img class="" src="/wp-content/themes/peibo-child/assets/img/empresas/Pantalla2.png" width="90%" alt="Peibo" />
+        <img class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s" src="/wp-content/themes/peibo-child/assets/img/empresas/Pantalla2.png" width="90%" alt="Peibo" />
       </div>
     </div>
   </div>
@@ -193,7 +193,7 @@ get_header();
       <!-- Control the column width, and how they should appear on different devices -->
     <div class="row ">
       <div class="col-sm-6">
-        <img class="" src="/wp-content/themes/peibo-child/assets/img/empresas/Credit_Card_Mockup2v2.png" width="90%" alt="Peibo" />
+        <img class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" src="/wp-content/themes/peibo-child/assets/img/empresas/Credit_Card_Mockup2v2.png" width="90%" alt="Peibo" />
       </div>
       <div class="col-sm-6" >
         <div class="row">

@@ -1,6 +1,21 @@
 //Scripts layoutScripts v1.0
 
+function WowData() {
+  var wow = new WOW(
+    {
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       false,       // default
+    live:         true        // default
+  })
+  setTimeout(function(){
+    wow.init();
+  },1000);
+}
+
 $(function(){
+  WowData();
   // Slider Servicios
   $('.sliderCards').slick({
     dots: false,

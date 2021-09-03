@@ -114,7 +114,7 @@ get_header();
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-4">
-          <figure class="cvvCt__img">
+          <figure class="cvvCt__img wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
             <img class="iconTar" src="<?php echo get_stylesheet_directory_uri(''); ?>/assets/img/digital.png" alt="Peibo" />
           </figure><!-- end.cvvCt__img -->
         </div><!-- end.col-* -->
@@ -187,7 +187,7 @@ get_header();
 </section>
 
 <section class="secMaskTwo mask2">
-  <img class="mask2" src="/wp-content/themes/peibo-child/assets/img/curva4.png" alt="Peibo" />    
+  <img class="mask2 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s" src="/wp-content/themes/peibo-child/assets/img/curva4.png" alt="Peibo" />    
   <div class="container-fluid d-flex justify-content-center ">
     <div class="row container">
       <div class="col-sm-12 d-flex justify-content-center" >
